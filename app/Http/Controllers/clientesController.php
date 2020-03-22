@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\clientes;
 use Illuminate\Http\Request;
 
 class clientesController extends Controller
@@ -23,7 +24,7 @@ class clientesController extends Controller
      */
     public function create()
     {
-        //
+        return view('clientes.create');
     }
 
     /**

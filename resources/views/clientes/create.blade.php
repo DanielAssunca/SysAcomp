@@ -42,8 +42,8 @@
                     <div class="form-group">
                         <label for="tipocliente">Tipo de Cliente</label>
                         <select class="form-control" name="tipocliente" required>
-                            <option>Orgfanizadora de Envetos</option>
-                            <option>Associação</option>
+                            <option>Organizadora de Eventos</option>
+                            <option>Propria Associação</option>
                         </select>
                     </div>
                 </div>

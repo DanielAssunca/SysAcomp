@@ -18,10 +18,7 @@
             {{ csrf_field() }}
             <h4>Dados do cliente</h4>
             <hr>
-            <div class="form-group">
-                <label for="nome">ID</label>
-                <input type="text" class="form-control" placeholder="ID" name="id" required>
-            </div>
+
             <div class="form-group">
                 <label for="nome">Nome Fantasia</label>
                 <input type="text" class="form-control" placeholder="Nome Fantasia" name="nome" required>

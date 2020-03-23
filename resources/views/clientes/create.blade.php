@@ -19,6 +19,10 @@
             <h4>Dados do cliente</h4>
             <hr>
             <div class="form-group">
+                <label for="nome">ID</label>
+                <input type="text" class="form-control" placeholder="ID" name="id" required>
+            </div>
+            <div class="form-group">
                 <label for="nome">Nome Fantasia</label>
                 <input type="text" class="form-control" placeholder="Nome Fantasia" name="nome" required>
             </div>
@@ -48,46 +52,6 @@
                     </div>
                 </div>
             </div>
-            <h4>Endereço</h4>
-            <hr>
-
-                <div class="form-group">
-                    <div class="row">
-                        <div class="col-md-2">
-                            <div class="form-group">
-                                <label for="cepEndereco">CEP</label>
-                                <input type="text" class="form-control" placeholder="CEP" required name="cep">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="logradouroEndereco">Logradouro</label>
-                                <input type="text" class="form-control" placeholder="Logradouro" required name="logradouro">
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label for="cidadeEndereco">Cidade</label>
-                                <input type="text" class="form-control" placeholder="Cidade" required name="cidade">
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label for="bairroEndereco">Bairro</label>
-                                <input type="text" class="form-control" placeholder="Bairro" required name="bairro">
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="form-group">
-                                <label for="numero">Número</label>
-                                <input type="number" class="form-control" placeholder="Número" required name="numero">
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
             <a href="{{ url()->previous() }}" class="btn btn-default">Voltar</a>
             <button type="submit" class="btn btn-primary">Cadastrar</button>

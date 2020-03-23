@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\clientes;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Pagination\Paginator;
 
 class clientesController extends Controller
 {

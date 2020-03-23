@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\clientes;
+
 use Illuminate\Http\Request;
+use App\clientes;
 
 class clientesController extends Controller
 {
@@ -35,7 +36,9 @@ class clientesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $dados = $request->all();
+        clientes::create($dados);
+        return redirect()->route('clientes.index');
     }
 
     /**

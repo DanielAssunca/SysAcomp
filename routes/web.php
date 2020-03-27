@@ -13,5 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::resource('clientes', 'ClientesController');
+
+Route::resource('clientes', 'clientesController');
 

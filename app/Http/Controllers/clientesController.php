@@ -4,12 +4,26 @@ namespace App\Http\Controllers;
 
 
 use Illuminate\Http\Request;
+use Validator;
 use App\clientes;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Pagination\Paginator;
 
 class clientesController extends Controller
 {
+
+    protected function validarclientes($request)
+    {
+        $validator = Validator::make($request->all(), [
+            "nome" => "required",
+            "email" => "required",
+            "tipodecliente" => "required",
+            "telefone" => "required | numeric"
+
+        ]);
+        return $validator;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -38,6 +52,11 @@ class clientesController extends Controller
      */
     public function store(Request $request)
     {
+        $validator = $this->validarclientes($request);
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator->errors());
+        }
+
         $dados = $request->all();
         clientes::create($dados);
         return redirect()->route('clientes.index');

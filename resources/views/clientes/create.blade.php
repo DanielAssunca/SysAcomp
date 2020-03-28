@@ -50,8 +50,36 @@
                 </div>
             </div>
 
-            <a href="{{ url()->previous() }}" class="btn btn-default">Voltar</a>
-            <button type="submit" class="btn btn-primary">Cadastrar</button>
+            <div  class="row">
+
+                <div  class="col-md-6">
+                        <div class="form-group">
+
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                               <span class="input-group-text">Customizações:</span>
+                            </div>
+                             <textarea  name="customizacoes" style="margin: 0px; width: 538px;height: 230px;" class="form-control" aria-label="With textarea"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+
+                    <div class="input-group">
+                        <div   class="input-group-prepend">
+                           <span class="input-group-text">Observações:</span>
+                        </div>
+                         <textarea name="observacoes" style="margin: 0px; width: 538px; height: 230px;" class="form-control" aria-label="With textarea"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                </div>
+            </div>
         </form>
 @endsection
 

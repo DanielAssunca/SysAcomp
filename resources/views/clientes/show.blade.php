@@ -11,6 +11,8 @@
                     <p>E-Mail: {{$clientes->email}}</p>
                     <p>Telefone: {{$clientes->telefone}}</p>
                     <p>Tipo de Cliente: {{$clientes->tipocliente}}</p>
+                    <p>Customizações: {{$clientes->customizacoes}}</p>
+                    <p>Observações: {{$clientes->observacoes}}</p>
                 </div>
             </div>
         </div>

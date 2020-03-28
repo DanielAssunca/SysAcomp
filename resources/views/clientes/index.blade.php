@@ -24,6 +24,7 @@
                             <th>Telefone</th>
                             <th>Tipo de Cliente</th>
 
+
                         </tr>
                     </thead>
                     <tbody>
@@ -33,6 +34,7 @@
                                 <td>{{$clientes->email}}</td>
                                 <td>{{$clientes->telefone}}</td>
                                 <td>{{$clientes->tipocliente}}</td>
+
 
                                 <td>
                                     <a href="#"><i class="glyphicon glyphicon-pencil"></i></a>

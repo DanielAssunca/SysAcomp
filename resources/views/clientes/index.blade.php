@@ -8,7 +8,7 @@
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Digite o nome do cliente" name="buscar">
                     <span class="input-group-btn">
-                        <button class="btn btn-info" type="submit">Pesquisar</button>
+                        <button class="btn btn-info" style="padding-right: 30px; padding-left: 20px;" type="submit">Pesquisar</button>
                     </span>
                 </div>
             </div>
@@ -46,7 +46,7 @@
             </div>
         </div>
         <div align="center" class="row">
-            {{-- TEM QUE VER POR QUE ESSA PORRA NAO ESTA SENDO RECONHCIDA PELO LARAVEL {{ $imoveis->links() }} --}}
+        {{-- TEM QUE VER POR QUE ESSA PORRA NAO ESTA SENDO RECONHCIDA PELO LARAVEL {{ $imoveis->links() }} --}}
 
         </div>
     </div>

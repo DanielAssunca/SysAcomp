@@ -27,20 +27,20 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($clientes as $clientes)
+                    @foreach($clientes as $cliente)
                     <tr>
-                        <td>{{$clientes->nome}}</td>
-                        <td>{{$clientes->email}}</td>
-                        <td>{{$clientes->telefone}}</td>
-                        <td>{{$clientes->tipocliente}}</td>
+                        <td>{{$cliente->nome}}</td>
+                        <td>{{$cliente->email}}</td>
+                        <td>{{$cliente->telefone}}</td>
+                        <td>{{$cliente->tipocliente}}</td>
 
 
                         <td>
-                            <a href="{{route('clientes.edit', $clientes->id)}}"><i
+                            <a href="{{route('clientes.edit', $cliente->id)}}"><i
                                     class="glyphicon glyphicon-pencil"></i></a>
-                            <a href="{{route('clientes.remove', $clientes->id)}}"><i
+                            <a href="{{route('clientes.remove', $cliente->id)}}"><i
                                     class="glyphicon glyphicon-trash"></i></a>
-                            <a href="{{route('clientes.show', $clientes->id)}}"><i
+                            <a href="{{route('clientes.show', $cliente->id)}}"><i
                                     class="glyphicon glyphicon-zoom-in"></i></a>
                         </td>
                     </tr>
@@ -50,8 +50,7 @@
         </div>
     </div>
     <div align="center" class="row">
-        {{-- N'AO ESTA FUNCIONANDO A PAGIMENTACAO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-         TEM QUE VER POR QUE ESSA PORRA NAO ESTA SENDO RECONHCIDA PELO LARAVEL {{ $clientes->links() }} --}}
+      {{ $clientes->links() }}
 
     </div>
 </div>

@@ -29,8 +29,8 @@ class ClientesController extends Controller
      */
     public function index(Request $request)
     {
-        $qtd = $request['qtd'] ?: 10;
-        $page = $request['page'] ?: 1;
+        $qtd = $request['qtd'] ?: 8;
+        $page = $request['page'] ?: 10;
         $buscar = $request['buscar'];
         Paginator::currentPageResolver(function () use ($page) {
             return $page;
@@ -39,6 +39,7 @@ class ClientesController extends Controller
             $cliente = DB::table('clientes')->where('nome', '=', $buscar)->paginate($qtd);
         } else {
             $cliente = DB::table('clientes')->paginate($qtd);
+            echo : $buscar;
         }
         $cliente = $cliente->appends(Request::capture()->except('page'));
         return view('clientes.index', compact('clientes'));

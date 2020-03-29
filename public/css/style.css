@@ -21,7 +21,7 @@
 }
 
 .menu {
-    width: 200px;
+    width: 0px;
     border-top: 1px solid #333;
     background-color: #222;
     flex-shrink: 0;

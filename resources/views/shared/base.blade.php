@@ -12,7 +12,8 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://github.com/DanielSilvaAssuncao/SysAcomp/blob/master/resources/js/script.js"></script>
+     <script type="text/javascript" src="<?php echo asset('js/script.js')?>"></script>
+    <script type="text/javascript" src="<?php echo asset('js/jquery-3.1.1.js')?>"></script>
     <link rel="stylesheet" href="<?php echo asset('css/style.css')?>" type="text/css">
 
 </head>
@@ -41,18 +42,14 @@
 
     <div class="menu">
         <ul>
-            <li><a href="#">Sair</a></li>
-            <li class="active"><a href="#">Painel</a></li>
-            <li><a href="#">Paginas</a></li>
-            <li><a href="#">Categorias</a></li>
-            <li><a href="#">Plugins</a></li>
-            <li><a href="#">Ir para o site</a></li>
+            <li><a href="#">Home</a></li>
+            <li class="active"><a href="{{route('clientes.index')}}">Clientes</a></li>
+            <li><a href="#">Contatos</a></li>
+            <li><a href="#">Eventos</a></li>
+            <li><a href="#">Acompanhamentos</a></li>
+            <li class="visible-xs" ><a href="#">Sair</a></li>
         </ul>
     </div>
-
-
-
-
 </body>
 
 <div class="container">

@@ -50,7 +50,8 @@
         </div>
     </div>
     <div align="center" class="row">
-        {{-- TEM QUE VER POR QUE ESSA PORRA NAO ESTA SENDO RECONHCIDA PELO LARAVEL {{ $imoveis->links() }} --}}
+        {{-- N'AO ESTA FUNCIONANDO A PAGIMENTACAO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+         TEM QUE VER POR QUE ESSA PORRA NAO ESTA SENDO RECONHCIDA PELO LARAVEL {{ $clientes->links() }} --}}
 
     </div>
 </div>

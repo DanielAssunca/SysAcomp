@@ -28,14 +28,21 @@ class clientesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-
-        //public function index()
-        {
-            $clientes = clientes::all();
-            return view('clientes.index', compact('clientes'));
+        $qtd = $request['qtd'] ?: 5;
+        $page = $request['page'] ?: 1;
+        $buscar = $request['buscar'];
+        Paginator::currentPageResolver(function () use ($page) {
+            return $page;
+        });
+        if ($buscar) {
+            $clientes = DB::table('clientes')->where('nome', '=', $buscar)->paginate($qtd);
+        } else {
+            $clientes = DB::table('clientes')->paginate($qtd);
         }
+        $clientes = $clientes->appends(Request::capture()->except('page'));
+        return view('clientes.index', compact('clientes'));
     }
 
     /**

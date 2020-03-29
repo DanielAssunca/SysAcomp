@@ -111,7 +111,7 @@ class clientesController extends Controller
     }
 
 
-/**
+    /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
@@ -119,7 +119,8 @@ class clientesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        clientes::find($id)->delete();
+        return redirect()->route('clientes.index');
     }
 
 

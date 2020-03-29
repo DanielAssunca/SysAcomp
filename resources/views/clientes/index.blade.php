@@ -8,7 +8,7 @@
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Digite o nome do cliente" name="buscar">
                     <span class="input-group-btn">
-                        <button class="btn btn-info" style="padding-right: 30px; padding-left: 20px;" type="submit">Pesquisar</button>
+                        <button class="btn btn-info" style="padding-right: 20px; padding-left: 17px;" type="submit">Pesquisar</button>
                     </span>
                 </div>
             </div>
@@ -37,7 +37,7 @@
 
 
                                 <td>
-                                    <a href="#"><i class="glyphicon glyphicon-pencil"></i></a>
+                                    <a href="{{route('clientes.edit', $clientes->id)}}"><i class="glyphicon glyphicon-pencil"></i></a>
                                     <a href="#"><i class="glyphicon glyphicon-trash"></i></a>
                                     <a href="{{route('clientes.show', $clientes->id)}}"><i class="glyphicon glyphicon-zoom-in"></i></a>
                                 </td>

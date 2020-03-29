@@ -87,7 +87,8 @@ class clientesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $clientes = clientes::find($id);
+        return view('clientes.edit', compact('clientes'));
     }
 
     /**
@@ -99,7 +100,10 @@ class clientesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $clientes = clientes::find($id);
+        $dados = $request->all();
+        $clientes->update($dados);
+        return redirect()->route('clientes.index');
     }
 
     /**

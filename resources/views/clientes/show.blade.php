@@ -11,11 +11,13 @@
                     <p>E-Mail: {{$clientes->email}}</p>
                     <p>Telefone: {{$clientes->telefone}}</p>
                     <p>Tipo de Cliente: {{$clientes->tipocliente}}</p>
-                    <p>Customizações: {{$clientes->customizacoes}}</p>
-                    <p>Observações: {{$clientes->observacoes}}</p>
+                    <p style="text-align: justify">Customizações: {{$clientes->customizacoes}}</p>
+                    <p style="text-align: justify">Observações: {{$clientes->observacoes}}</p>
                 </div>
             </div>
         </div>
     </div>
-    <a href="{{ url()->previous() }}" class="btn btn-primary">Voltar</a>
+    <a href="{{ url()->previous() }}" class="btn btn-info">Voltar</a>
 @endsection
+
+

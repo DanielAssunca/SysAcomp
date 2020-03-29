@@ -100,6 +100,10 @@ class clientesController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $validator = $this->validarclientes($request);
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator->errors());
+        }
         $clientes = clientes::find($id);
         $dados = $request->all();
         $clientes->update($dados);

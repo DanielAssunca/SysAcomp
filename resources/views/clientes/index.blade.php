@@ -38,7 +38,8 @@
                         <td>
                             <a href="{{route('clientes.edit', $clientes->id)}}"><i
                                     class="glyphicon glyphicon-pencil"></i></a>
-                            <a href="#"><i class="glyphicon glyphicon-trash"></i></a>
+                            <a href="{{route('clientes.remove', $clientes->id)}}"><i
+                                    class="glyphicon glyphicon-trash"></i></a>
                             <a href="{{route('clientes.show', $clientes->id)}}"><i
                                     class="glyphicon glyphicon-zoom-in"></i></a>
                         </td>

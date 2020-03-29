@@ -110,7 +110,8 @@ class clientesController extends Controller
         return redirect()->route('clientes.index');
     }
 
-    /**
+
+/**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
@@ -119,5 +120,13 @@ class clientesController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+
+    public function remover($id)
+    {
+        $clientes = clientes::find($id);
+
+        return view('clientes.remove', compact('clientes'));
     }
 }

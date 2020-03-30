@@ -15,5 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/clientes/remove/{id}', 'ClientesController@remover')->name('clientes.remove');
 Route::resource('clientes', 'clientesController');
+Route::resource('home', 'HomeController');
 
 

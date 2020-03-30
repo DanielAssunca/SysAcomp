@@ -22,6 +22,7 @@
 
 .menu {
     width: 0px;
+    height: 250px;
     border-top: 1px solid #333;
     background-color: #222;
     flex-shrink: 0;
@@ -30,7 +31,7 @@
 }
 
 .menu.menu-open {
-    width: 300px;
+    width: 180px;
 }
 
 .menu ul{

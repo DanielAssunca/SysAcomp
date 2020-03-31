@@ -12,8 +12,7 @@ class eventos extends Model
     ];
     protected $table = "eventos";
 
-    public function clientes()
-    {
+    public function clientes(){
         return $this->belongsTo('App\clientes', 'clientes_id');
     }
 }

@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Validator;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Pagination\Paginator;
+use App\eventos;
 
 class EventoController extends Controller
 {
@@ -11,19 +15,21 @@ class EventoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        $qtd = $request['qtd'] ?: 5;
+        $page = $request['page'] ?: 1;
+        $buscar = $request['buscar'];
+        Paginator::currentPageResolver(function () use ($page) {
+            return $page;
+        });
+        if ($buscar) {
+            $eventos = DB::table('eventos')->where('nome', '=', $buscar)->paginate($qtd);
+        } else {
+            $eventos = DB::table('eventos')->paginate($qtd);
+        }
+        $eventos = $eventos->appends(Request::capture()->except('page'));
+        return view('eventos.index', compact('eventos'));
     }
 
     /**
@@ -81,4 +87,13 @@ class EventoController extends Controller
     {
         //
     }
+
+    public function remover($id)
+    {
+        $eventos = eventos::find($id);
+
+        return view('eventos.remove', compact('eventos'));
+    }
 }
+
+

@@ -44,8 +44,8 @@
         <ul>
             <li><a href="{{route('home.index')}}">Home</a></li>
             <li class="active"><a href="{{route('clientes.index')}}">Clientes</a></li>
+            <li class="active"><a href="{{route('eventos.index')}}">Eventos</a></li>
             <li><a href="#">Contatos</a></li>
-            <li><a href="#">Eventos</a></li>
             <li><a href="#">Acompanhamentos</a></li>
             <li class="visible-xs"><a href="#">Sair</a></li>
         </ul>

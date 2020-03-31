@@ -4,12 +4,26 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\eventos;
+use Validator;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Pagination\Paginator;
 
 class EventoController extends Controller
 
 {
+
+
+    protected function validareventos($request)
+    {
+        $validator = Validator::make($request->all(), [
+            "nome" => "required",
+            "data_evento" => "required",
+            "site_evento" => "required"
+
+        ]);
+        return $validator;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -62,7 +76,8 @@ class EventoController extends Controller
      */
     public function edit($id)
     {
-        //
+        $eventos = eventos::find($id);
+        return view('eventos.edit', compact('eventos'));
     }
 
     /**
@@ -74,7 +89,14 @@ class EventoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $validator = $this->validareventos($request);
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator->errors());
+        }
+        $eventos = eventos::find($id);
+        $dados = $request->all();
+        $eventos->update($dados);
+        return redirect()->route('eventos.index');
     }
 
     /**
@@ -97,5 +119,3 @@ class EventoController extends Controller
         return view('eventos.remove', compact('eventos'));
     }
 }
-
-

@@ -12,5 +12,9 @@ class clientes extends Model
       "nome", "email", "telefone", "tipocliente", "customizacoes", "observacoes"
     ];
     protected $table = "clientes";
+
+    public function eventos(){
+        return $this->hasMany('App\eventos', 'clientes_id');
+    }
 }
 

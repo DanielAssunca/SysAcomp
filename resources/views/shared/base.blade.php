@@ -21,34 +21,37 @@
 <body>
 
     {{--AQUI VAI SER CONSTRIODO O MENU DA APLICAÇÃO!!! --}}
+    <div class="row">
+        <div class="col-md-12 float-right">
+            <nav class="navbar navbar-inverse float-left">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle pull-left">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Administrador</a>
+                    </div>
+                    <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#">Sair</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
 
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle pull-left">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Administrador</a>
-            </div>
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Sair</a></li>
+            <div class="menu">
+                <ul>
+                    <li><a href="{{route('home.index')}}">Home</a></li>
+                    <li class="active"><a href="{{route('clientes.index')}}">Clientes</a></li>
+                    <li class="active"><a href="{{route('eventos.index')}}">Eventos</a></li>
+                    <li><a href="#">Contatos</a></li>
+                    <li><a href="#">Acompanhamentos</a></li>
+                    <li class="visible-xs"><a href="#">Sair</a></li>
                 </ul>
             </div>
         </div>
-    </nav>
-
-    <div class="menu">
-        <ul>
-            <li><a href="{{route('home.index')}}">Home</a></li>
-            <li class="active"><a href="{{route('clientes.index')}}">Clientes</a></li>
-            <li class="active"><a href="{{route('eventos.index')}}">Eventos</a></li>
-            <li><a href="#">Contatos</a></li>
-            <li><a href="#">Acompanhamentos</a></li>
-            <li class="visible-xs"><a href="#">Sair</a></li>
-        </ul>
     </div>
 </body>
 

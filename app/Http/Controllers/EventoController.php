@@ -3,12 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Validator;
+use App\eventos;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Pagination\Paginator;
-use App\eventos;
 
 class EventoController extends Controller
+
 {
     /**
      * Display a listing of the resource.
@@ -85,7 +85,9 @@ class EventoController extends Controller
      */
     public function destroy($id)
     {
-        //
+
+        eventos::find($id)->delete();
+        return redirect()->route('eventos.index');
     }
 
     public function remover($id)

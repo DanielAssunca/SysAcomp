@@ -15,8 +15,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/clientes/remove/{id}', 'ClientesController@remover')->name('clientes.remove');
 Route::resource('clientes', 'clientesController');
-Route::get('/eventos/remove/{id}', 'EventosController@remover')->name('eventos.remove');
+
+Route::get('/eventos/remove/{id}', 'EventoController@remover')->name('eventos.remove');
 Route::resource('eventos', 'EventoController');
+
 Route::resource('home', 'HomeController');
 
 

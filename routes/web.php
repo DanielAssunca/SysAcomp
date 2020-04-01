@@ -19,6 +19,9 @@ Route::resource('clientes', 'clientesController');
 Route::get('/eventos/remove/{id}', 'EventoController@remover')->name('eventos.remove');
 Route::resource('eventos', 'EventoController');
 
+Route::get('/contatos/remove/{id}', 'contatosController@remover')->name('contatos.remove');
+Route::resource('contatos', 'contatosController');
+
 Route::resource('home', 'HomeController');
 
 

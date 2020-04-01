@@ -65,7 +65,9 @@ class EventoController extends Controller
      */
     public function show($id)
     {
-        //
+        $eventos = eventos::find($id);
+
+        return view('eventos.show', compact('eventos'));
     }
 
     /**

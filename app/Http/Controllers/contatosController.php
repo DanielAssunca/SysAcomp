@@ -38,7 +38,7 @@ class contatosController extends Controller
 
     public function index(Request $request)
     {
-        $qtd = $request['qtd'] ?: 5;
+        $qtd = $request['qtd'] ?: 4;
         $page = $request['page'] ?: 1;
         $buscar = $request['buscar'];
         Paginator::currentPageResolver(function () use ($page) {

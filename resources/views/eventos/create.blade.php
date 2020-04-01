@@ -20,6 +20,24 @@
             <h4>Dados do Evento</h4>
             <hr>
 
+            <h4>Cliente</h4>
+            <hr>
+            <div class="form-group">
+                <label for="clientes_id">Selecione o Cliente</label>
+                <select class="form-control" name="clientes_id" required>
+                    @foreach($clientes as $cliente)
+                    <option value="{{$cliente->id}}">
+                        {{$cliente->nome}}</option>
+                    @endforeach
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="cod_centro_de_custo">Codigo do Centro de Custo</label>
+                <input type="text" class="form-control" name="cod_centro_de_custo" required>
+            </div>
+
+
             <div class="form-group">
                 <label for="nome">Nome</label>
                 <input type="text" class="form-control" placeholder="Nome do Evento" name="nome" required>
@@ -28,7 +46,8 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="data">Data de Inicio</label>
-                        <input type="data" class="form-control" placeholder="Data de Inicio" name="data" required>
+                        <input type="text" class="form-control" placeholder="Ex.: dd/mm/aaaa" data-mask="00/00/0000"
+                            maxlength="10" autocomplete="on" class="form-control" name="data_evento" required>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -43,7 +62,8 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="localevento">Local</label>
-                        <input type="localevento" class="form-control" placeholder="Local do Evento" required name="localevento">
+                        <input type="localevento" class="form-control" placeholder="Local do Evento" required
+                            name="localevento">
                     </div>
                 </div>
             </div>
@@ -57,8 +77,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">Site do Evento:</span>
                             </div>
-                            <textarea name="site_evento" style="margin: 0px; width: 538px;height: 230px;"
-                                class="form-control" aria-label="With textarea"></textarea>
+                            <input name="site_evento" class="form-control" aria-label="With textarea">
                         </div>
                     </div>
                 </div>
@@ -69,8 +88,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">Site da Entidade:</span>
                             </div>
-                            <textarea name="site_entidade" style="margin: 0px; width: 538px; height: 230px;"
-                                class="form-control" aria-label="With textarea"></textarea>
+                            <input name="site_entidade" class="form-control" aria-label="With textarea">
                         </div>
                     </div>
                 </div>

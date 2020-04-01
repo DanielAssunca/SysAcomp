@@ -51,7 +51,7 @@
         </div>
     </div>
     <div align="center" class="row">
-      {{ $eventos->links() }}
+        {{ $eventos->links() }}
 
     </div>
 </div>

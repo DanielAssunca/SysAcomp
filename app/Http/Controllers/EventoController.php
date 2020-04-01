@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
-use App\eventos;
 use Validator;
+use App\clientes;
+use App\eventos;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Pagination\Paginator;
 
@@ -22,6 +24,7 @@ class EventoController extends Controller
 
         ]);
         return $validator;
+
     }
 
     /**
@@ -29,9 +32,15 @@ class EventoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function create()
+    {
+        $clientes = clientes::all();
+        return view('eventos.create', compact('clientes'));
+    }
     public function index(Request $request)
     {
-        $qtd = $request['qtd'] ?: 5;
+        $qtd = $request['qtd'] ?: 4;
         $page = $request['page'] ?: 1;
         $buscar = $request['buscar'];
         Paginator::currentPageResolver(function () use ($page) {
@@ -54,7 +63,10 @@ class EventoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $dados = $request->all();
+        $produto = eventos::create($dados);
+        return redirect()->route('eventos.index');
     }
 
     /**
@@ -78,6 +90,10 @@ class EventoController extends Controller
      */
     public function edit($id)
     {
+        $validator = $this->validareventos($request);
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator->errors());
+        }
         $eventos = eventos::find($id);
         return view('eventos.edit', compact('eventos'));
     }

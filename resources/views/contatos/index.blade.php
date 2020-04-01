@@ -30,11 +30,11 @@
                 <tbody>
                     @foreach($contatos as $contato)
                     <tr>
-                        <td>{{$contatos->nome}}</td>
-                        <td>{{$contatos->email}}</td>
-                        <td>{{$contatos->celular}}</td>
-                        <td>{{$contatos->telefone}}</td>
-                        <td>{{$contatos->skype}}</td>
+                        <td>{{$contato->nome}}</td>
+                        <td>{{$contato->email}}</td>
+                        <td>{{$contato->celular}}</td>
+                        <td>{{$contato->telefone}}</td>
+                        <td>{{$contato->skype}}</td>
 
 
                         <td>

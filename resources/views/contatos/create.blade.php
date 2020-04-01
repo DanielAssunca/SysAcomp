@@ -20,34 +20,48 @@
             <h4>Dados do contato</h4>
             <hr>
 
+            <h4>Evento</h4>
+            <hr>
+            <div class="form-group">
+                <label for="eventos_id">Selecione o Evento</label>
+                <select class="form-control" name="eventos_id" required>
+                    @foreach($eventos as $evento)
+                    <option value="{{$evento->id}}">
+                        {{$evento->nome}}</option>
+                    @endforeach
+                </select>
+            </div>
+
+
             <div class="form-group">
                 <label for="nome">Nome</label>
-                <input type="text" class="form-control" placeholder="Nome do Contato" name="nome" required>
+                <input type="text" class="form-control" maxlength="100" placeholder="Nome do Contato" name="nome" required>
             </div>
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="email">E-mail</label>
-                        <input type="email" class="form-control" placeholder="e-mail" name="email" required>
+                        <input type="email" autocomplete="on" class="form-control" placeholder="e-mail" name="email" required>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="celular">Celular</label>
-                        <input type="tel" class="form-control" placeholder="Celular do Contato" required name="celular">
+                        <input class="form-control" autocomplete="on" type="tel" placeholder="Ex: (99) 99999-9999"
+                        maxlength="15" required name="celular">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="telefone">Telefone</label>
-                        <input type="tel" class="form-control" placeholder="Telefone de Contato" required
-                            name="telefone">
+                        <input class="form-control" type="tel" autocomplete="on" name="telefone" placeholder="Ex: (99) 99999-9999"
+                             maxlength="15" required name="telefone">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="skype">Skype</label>
-                        <input type="skype" class="form-control" placeholder="Skype do contato" required name="skype">
+                        <input type="text" class="form-control" autocomplete="on"  maxlength="60" placeholder="Skype do contato" required name="skype">
                     </div>
                 </div>
                 <div class="col-md-6">

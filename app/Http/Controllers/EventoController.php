@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Validator;
 use App\clientes;
+use App\contatos;
 use App\eventos;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Pagination\Paginator;
@@ -65,7 +66,7 @@ class EventoController extends Controller
     {
 
         $dados = $request->all();
-        $produto = eventos::create($dados);
+        eventos::create($dados);
         return redirect()->route('eventos.index');
     }
 
@@ -94,6 +95,7 @@ class EventoController extends Controller
         if ($validator->fails()) {
             return redirect()->back()->withErrors($validator->errors());
         }
+
         $eventos = eventos::find($id);
         return view('eventos.edit', compact('eventos'));
     }

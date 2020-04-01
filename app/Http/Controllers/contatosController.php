@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Validator;
 use App\contatos;
+use App\eventos;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Pagination\Paginator;
 
@@ -16,8 +17,8 @@ class contatosController extends Controller
     {
         $validator = Validator::make($request->all(), [
             "nome" => "required",
-            "email" => "required",
-            "telefone" => "required | numeric"
+            "email" => "required"
+
 
         ]);
         return $validator;
@@ -28,6 +29,13 @@ class contatosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function create()
+    {
+        $eventos = eventos::all();
+        return view('contatos.create', compact('eventos'));
+    }
+
     public function index(Request $request)
     {
         $qtd = $request['qtd'] ?: 5;
@@ -50,10 +58,6 @@ class contatosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        return view('contatos.create');
-    }
 
     /**
      * Store a newly created resource in storage.

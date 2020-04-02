@@ -42,7 +42,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Digite o nome do contato"
+                                    <input type="text"  style="text-transform:uppercase;" class="form-control" placeholder="Digite o nome do contato"
                                         name="buscar">
                                     <span class="input-group-btn">
                                         <button class="btn btn-info" style="padding-right: 20px; padding-left: 17px;"

@@ -48,7 +48,7 @@ class EventoController extends Controller
             return $page;
         });
         if ($buscar) {
-            $eventos = DB::table('eventos')->where('nome', '=', $buscar)->paginate($qtd);
+            $eventos = DB::table('eventos')->where('nome', 'ilike', '%'.$buscar.'%')->paginate($qtd);
         } else {
             $eventos = DB::table('eventos')->paginate($qtd);
         }

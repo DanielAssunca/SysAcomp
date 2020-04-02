@@ -43,7 +43,7 @@ class clientesController extends Controller
             return $page;
         });
         if ($buscar) {
-            $clientes = DB::table('clientes')->where('nome', '=', $buscar)->paginate($qtd);
+            $clientes = DB::table('clientes')->where('nome', 'ilike', '%'.$buscar.'%')->paginate($qtd);
         } else {
             $clientes = DB::table('clientes')->paginate($qtd);
         }

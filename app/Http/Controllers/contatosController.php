@@ -45,7 +45,7 @@ class contatosController extends Controller
             return $page;
         });
         if ($buscar) {
-            $contatos = DB::table('contatos')->where('nome', '=', $buscar)->paginate($qtd);
+            $contatos = DB::table('contatos')->where('nome', 'ilike', '%'.$buscar.'%')->paginate($qtd);
         } else {
             $contatos = DB::table('contatos')->paginate($qtd);
         }

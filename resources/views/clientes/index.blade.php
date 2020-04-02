@@ -41,7 +41,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="Digite o nome do cliente"
+                                        <input type="text"  style="text-transform:uppercase;" class="form-control" placeholder="Digite o nome do cliente"
                                             name="buscar">
                                         <span class="input-group-btn">
                                             <button class="btn btn-info"

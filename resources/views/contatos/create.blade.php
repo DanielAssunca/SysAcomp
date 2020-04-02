@@ -51,11 +51,6 @@
 
                             <form method="post" action="{{route ('contatos.store')}}">
                                 {{ csrf_field() }}
-                                <h4>Dados do contato</h4>
-                                <hr>
-
-                                <h4>Evento</h4>
-                                <hr>
                                 <div class="form-group">
                                     <label for="eventos_id">Selecione o Evento</label>
                                     <select class="form-control" name="eventos_id" required>

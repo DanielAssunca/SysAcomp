@@ -53,7 +53,7 @@
 
                             <form method="post" action="{{route ('eventos.store')}}">
                                 {{ csrf_field() }}
-                                <h4>Dados do Evento</h4>
+
 
                                 <div class="row">
                                     <div class="col-md-6">

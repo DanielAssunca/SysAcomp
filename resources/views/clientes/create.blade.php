@@ -45,14 +45,12 @@
                     <div class="panel panel-default">
 
                         <div class="panel-heading">
-                            <h3>Cadastre de Cliente</h3>
+                            <h3>Cadastro de Cliente</h3>
                         </div>
                         <div class="panel-body">
 
                             <form method="post" action="{{route ('clientes.store')}}">
                                 {{ csrf_field() }}
-                                <h4>Dados do cliente</h4>
-                                <hr>
 
                                 <div class="form-group">
                                     <label for="nome">Nome Fantasia</label>

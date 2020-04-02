@@ -4,7 +4,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 
     <title>Sistema de Acompanhamento de Clientes</title>
@@ -18,48 +17,19 @@
 
 </head>
 
-<body>
+     <div class="row">
+        <div class="col-md-12">
 
-    {{--AQUI VAI SER CONSTRIODO O MENU DA APLICAÇÃO!!! --}}
-    <div class="row">
-        <div class="col-md-12 float-right">
-            <nav class="navbar navbar-inverse float-left">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle pull-left">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="#">Administrador</a>
-                    </div>
-                    <div class="collapse navbar-collapse">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#">Sair</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+            @yield('content')
 
-            <div class="menu">
-                <ul>
-                    <li><a href="{{route('home.index')}}">Home</a></li>
-                    <li class="active"><a href="{{route('clientes.index')}}">Clientes</a></li>
-                    <li class="active"><a href="{{route('eventos.index')}}">Eventos</a></li>
-                    <li class="active"><a href="{{route('contatos.index')}}">Contatos</a></li>
-                    <li><a href="#">Acompanhamentos</a></li>
-                    <li class="visible-xs"><a href="#">Sair</a></li>
-                </ul>
-            </div>
+
         </div>
     </div>
+
 </body>
 
-<div class="container">
-
-    @yield('content')
 
 
-</div>
+
 
 </html>

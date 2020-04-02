@@ -91,10 +91,6 @@ class EventoController extends Controller
      */
     public function edit($id)
     {
-        $validator = $this->validareventos($request);
-        if ($validator->fails()) {
-            return redirect()->back()->withErrors($validator->errors());
-        }
 
         $eventos = eventos::find($id);
         return view('eventos.edit', compact('eventos'));

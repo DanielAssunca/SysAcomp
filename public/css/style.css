@@ -31,7 +31,8 @@
 }
 
 .menu.menu-open {
-    width: 180px;
+    width: 200px;
+    height: 1000px;
 }
 
 .menu ul{

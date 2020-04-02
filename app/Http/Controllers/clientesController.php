@@ -28,6 +28,12 @@ class clientesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function create()
+    {
+        $clientes = clientes::all();
+        return view('clientes.create', compact('clientes'));
+    }
     public function index(Request $request)
     {
         $qtd = $request['qtd'] ?: 5;

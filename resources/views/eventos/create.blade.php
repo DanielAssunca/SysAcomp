@@ -138,14 +138,15 @@
 
                                         </div>
                                     </div>
+                                </div>
 
-
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <a href="{{ url()->previous() }}" class="btn btn-info">Voltar</a>
-                                            <button type="submit" class="btn btn-primary">Cadastrar</button>
-                                        </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <a href="{{ url()->previous() }}" class="btn btn-info">Voltar</a>
+                                        <button type="submit" class="btn btn-primary">Cadastrar</button>
                                     </div>
+                                </div>
+
                             </form>
                         </div>
                     </div>

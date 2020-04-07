@@ -99,57 +99,24 @@
                                                 value="{{$contatos->modinscricoes}}">
                                                 <option
                                                     {{($contatos->modinscricoes == 'Inscrições'  ? 'selected' : '')}}>
-                                                    Organizadora de Eventos</option>
+                                                    Inscrições</option>
                                                 <option
-                                                    {{($contatos->modinscricoes == 'Organizadora de Eventos'  ? 'selected' : '')}}>
-                                                    Propria
-                                                    Associação</option>
+                                                    {{($contatos->modinscricoes == 'Programação Cientifica'  ? 'selected' : '')}}>
+                                                    Programação Cientifica</option>
                                                 <option
                                                     {{($contatos->modinscricoes == 'Associação'  ? 'selected' : '')}}>
-                                                    Propria
                                                     Associação</option>
                                             </select>
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="row">
-
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">Customizações:</span>
-                                                </div>
-                                                <textarea name="customizacoes"
-                                                    style="margin: 0px; width: 538px;height: 230px;"
-                                                    class="form-control" aria-label="With textarea"
-                                                    value="{{$contatos->customizacoes}}"></textarea>
-                                            </div>
-                                        </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <a href="{{ url()->previous() }}" class="btn btn-info">Voltar</a>
+                                        <button type="submit" class="btn btn-primary">Cadastrar</button>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
+                                </div>
 
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">Observações:</span>
-                                                </div>
-                                                <textarea name="observacoes"
-                                                    style="margin: 0px; width: 538px; height: 230px;"
-                                                    class="form-control" aria-label="With textarea"
-                                                    value="{{$contatos->observacoes}}"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <a href="{{ url()->previous() }}" class="btn btn-info">Voltar</a>
-                                            <button type="submit" class="btn btn-primary">Cadastrar</button>
-                                        </div>
-                                    </div>
                             </form>
                         </div>
                     </div>

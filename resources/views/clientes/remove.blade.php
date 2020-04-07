@@ -49,7 +49,7 @@
                                         <p>Nome: {{$clientes->nome}}</p>
                                         <p>E-Mail: {{$clientes->email}}</p>
                                         <p>Telefone: {{$clientes->telefone}}</p>
-                                        <p>Tipo de Cliente: {{$clientes->telefone}}</p>
+                                        <p>Tipo de Cliente: {{$clientes->tipocliente}}</p>
                                     </div>
                                 </div>
                                 <button type="submit" class="btn btn-danger">Remover</button>

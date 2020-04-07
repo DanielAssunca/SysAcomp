@@ -106,8 +106,8 @@
                                                 </div>
                                                 <textarea name="customizacoes"
                                                     style="margin: 0px; width: 538px;height: 230px;"
-                                                    class="form-control" aria-label="With textarea"
-                                                    value="{{$clientes->customizacoes}}"></textarea>
+                                                    class="form-control" aria-label="With textarea"> {{$clientes->customizacoes}}
+                                                </textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -120,8 +120,8 @@
                                                 </div>
                                                 <textarea name="observacoes"
                                                     style="margin: 0px; width: 538px; height: 230px;"
-                                                    class="form-control" aria-label="With textarea"
-                                                    value="{{$clientes->observacoes}}"></textarea>
+                                                    class="form-control"
+                                                    aria-label="With textarea">{{$clientes->observacoes}}</textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -132,6 +132,7 @@
                                             <button type="submit" class="btn btn-primary">Cadastrar</button>
                                         </div>
                                     </div>
+                                </div>
                             </form>
                         </div>
                     </div>

@@ -120,7 +120,10 @@
                                             <a href="{{ url()->previous() }}" class="btn btn-info">Voltar</a>
                                             <button type="submit" class="btn btn-primary">Cadastrar</button>
                                         </div>
+
                                     </div>
+
+                                </div>
                             </form>
 
                         </div>

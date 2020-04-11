@@ -22,10 +22,6 @@ Route::resource('eventos', 'EventoController');
 Route::get('/contatos/remove/{id}', 'contatosController@remover')->name('contatos.remove');
 Route::resource('contatos', 'contatosController');
 
-Route::get('/acompanhamento_evento/remove/{id}', 'acompanhamentosController@remover')->name('acompanhamento_evento.remove');
-Route::resource('acompanhamento_evento', 'acompanhamentosController');
-
-
 Route::resource('home', 'HomeController');
 
 

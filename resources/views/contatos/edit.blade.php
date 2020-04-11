@@ -45,7 +45,7 @@
                     <div class="panel panel-default">
 
                         <div class="panel-heading">
-                            <h3>Cadastro de Contatos</h3>
+                            <h3>Edição de Contatos</h3>
                         </div>
                         <div class="panel-body">
 
@@ -113,7 +113,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <a href="{{ url()->previous() }}" class="btn btn-info">Voltar</a>
-                                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+                                        <button type="submit" class="btn btn-primary">Editar</button>
                                     </div>
                                 </div>
 

@@ -94,6 +94,44 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="row">
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <label>Cep:
+                                                    <input class="form-control" name="cep" type="text" id="cep"
+                                                        size="10" value="{{$clientes->cep}}" maxlength="9" onblur="pesquisacep(this.value);" />
+                                                </label><br />
+
+                                                <label>Rua:
+                                                    <input class="form-control" name="rua" type="text" id="rua"
+                                                        size="60"value="{{$clientes->rua}}"></label><br />
+                                                <label>Bairro:
+                                                    <input class="form-control" name="bairro" type="text" id="bairro"
+                                                        size="40" value="{{$clientes->bairro}}"></label><br />
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <label>Cidade:
+                                                    <input class="form-control" name="cidade" type="text" id="cidade"
+                                                        size="40" value="{{$clientes->cidade}}"></label><br />
+                                                <label>Estado:
+                                                    <input class="form-control" name="uf" type="text" id="uf"
+                                                        size="2" value="{{$clientes->uf}}"></label><br />
+                                                <label>IBGE:
+                                                    <input class="form-control" name="ibge" type="text" id="ibge"
+                                                        size="8" value="{{$clientes->ibge}}"></label><br />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
 
                                 <div class="row">
 

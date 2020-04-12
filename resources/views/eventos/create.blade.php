@@ -112,9 +112,10 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="logo_eventovg">Logo do Evento</label>
-                                            <input type="tel" class="form-control" placeholder="Logo do Evento" required
-                                                name="logo_evento">
+                                            <label for="logo_evento">Logo do Evento</label>
+                                            <input type="file" name="logo_evento" onchange="Sistema.readURL(this);"
+                                                style="#fff none repeat scroll 0 0" class="ativo">
+
                                         </div>
                                     </div>
                                 </div>
@@ -139,6 +140,12 @@
                                         </div>
                                     </div>
                                 </div>
+
+
+
+
+
+
 
                                 <div class="col-md-6">
                                     <div class="form-group">

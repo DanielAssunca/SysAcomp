@@ -86,6 +86,46 @@
                                     </div>
                                 </div>
 
+
+
+                                <div class="row">
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <label>Cep:
+                                                    <input class="form-control" name="cep" type="text" id="cep" value=""
+                                                        size="10" maxlength="9" onblur="pesquisacep(this.value);" />
+                                                </label><br />
+
+                                                <label>Rua:
+                                                    <input class="form-control" name="rua" type="text" id="rua"
+                                                        size="60" /></label><br />
+                                                <label>Bairro:
+                                                    <input class="form-control" name="bairro" type="text" id="bairro"
+                                                        size="40" /></label><br />
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <label>Cidade:
+                                                    <input class="form-control" name="cidade" type="text" id="cidade"
+                                                        size="40" /></label><br />
+                                                <label>Estado:
+                                                    <input class="form-control" name="uf" type="text" id="uf"
+                                                        size="2" /></label><br />
+                                                <label>IBGE:
+                                                    <input class="form-control" name="ibge" type="text" id="ibge"
+                                                        size="8" /></label><br />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
                                 <div class="row">
 
                                     <div class="col-md-6">
@@ -115,6 +155,8 @@
                                         </div>
                                     </div>
 
+
+
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <a href="{{ url()->previous() }}" class="btn btn-info">Voltar</a>
@@ -125,12 +167,18 @@
 
                                 </div>
                             </form>
-
                         </div>
+
+
+
                     </div>
+
+
+
                 </div>
             </div>
         </div>
     </div>
+
 </body>
 @endsection

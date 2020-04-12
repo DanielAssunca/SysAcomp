@@ -9,7 +9,8 @@ use Illuminate\Database\Eloquent\Model;
 class clientes extends Model
 {
     protected $fillable = ["id",
-      "nome", "email", "telefone", "tipocliente", "customizacoes", "observacoes"
+      "nome", "email", "telefone", "tipocliente", "customizacoes", "observacoes",
+      "cep", "rua", "bairro", "cidade", "uf", "ibge"
     ];
     protected $table = "clientes";
 

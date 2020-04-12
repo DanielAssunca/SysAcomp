@@ -91,20 +91,7 @@
 
                                 <div class="row">
 
-                                    <div class="col-md-6">
-                                        <div class="form-group">
 
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">Logo do Evento:</span>
-                                                </div>
-                                                <img src="" alt="">
-                                                <textarea name="logo_evento" class="form-control"
-                                                    aria-label="With textarea"
-                                                    value="{{$eventos->logo_evento}}"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
 
                                     <div class="col-md-10">
                                         <div class="form-group">

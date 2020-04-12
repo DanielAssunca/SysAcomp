@@ -110,14 +110,19 @@
                                                 required name="localevento">
                                         </div>
                                     </div>
+
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="logo_evento">Logo do Evento</label>
-                                            <input type="file" name="logo_evento" onchange="Sistema.readURL(this);"
-                                                style="#fff none repeat scroll 0 0" class="ativo">
-
+                                            <label for="valida_socio">Qual a forma de validação de sócios?</label>
+                                            <select class="form-control" name="valida_socio" required>
+                                                <option>Não Valida</option>
+                                                <option>iCase</option>
+                                                <option>Webservice</option>
+                                                <option>Planilha</option>
+                                            </select>
                                         </div>
                                     </div>
+
                                 </div>
 
                                 <div class="row">
@@ -130,6 +135,9 @@
 
                                         </div>
                                     </div>
+
+
+
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="site_entidade">Site da Entidade</label>

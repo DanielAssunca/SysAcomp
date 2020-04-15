@@ -12,7 +12,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">SysAcompxxxxxxxxxxxxxxxxx</a>
+                <a class="navbar-brand" href="#">SysAcomp</a>
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
@@ -28,7 +28,7 @@
                 <li class="active"><a href="{{route('acompanhamentos.index')}}">Acompanhamentos</a></li>
                 <li class="active"><a href="{{route('eventos.index')}}">Eventos</a></li>
                 <li class="active"><a href="{{route('contatos.index')}}">Contatos</a></li>
-                <li><a href="#">Acompanhamentos</a></li>
+                <li class="active"><a href="#">Acompanhamentos</a></li>
                 <li class="visible-xs"><a href="#">Sair</a></li>
             </ul>
         </div>

@@ -27,7 +27,7 @@
                 <li class="active"><a href="{{route('clientes.index')}}">Clientes</a></li>
                 <li class="active"><a href="{{route('eventos.index')}}">Eventos</a></li>
                 <li class="active"><a href="{{route('contatos.index')}}">Contatos</a></li>
-                <li><a href="{{route('acompanhamentos.index')}}">Acompanhamentos</a></li>
+                <li class="active"><a href="{{route('acompanhamentos.index')}}">Acompanhamentos</a></li>
                 <li class="visible-xs"><a href="#">Sair</a></li>
             </ul>
         </div>

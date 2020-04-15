@@ -25,7 +25,7 @@
         <div class="menu">
             <ul>
                 <li><a href="{{route('home.index')}}">Home</a></li>
-                <li class="active"><a href="{{route('clientes.index')}}">Clientes</a></li>
+                <li class="active"><a href="{{route('clientes.index')}}">Acompanhamentos</a></li>
                 <li class="active"><a href="{{route('eventos.index')}}">Eventos</a></li>
                 <li class="active"><a href="{{route('contatos.index')}}">Contatos</a></li>
                 <li><a href="{{route('acompanhamentos.index')}}">Acompanhamentos</a></li>
@@ -45,11 +45,11 @@
                     <div class="panel panel-default">
 
                         <div class="panel-heading">
-                            <h3>Cadastro de Cliente</h3>
+                            <h3>Cadastro de Acompanhamentos</h3>
                         </div>
                         <div class="panel-body">
 
-                            <form method="post" action="{{route ('clientes.store')}}">
+                            <form method="post" action="{{route ('acompanhamentos.store')}}">
                                 {{ csrf_field() }}
 
                                 <div class="form-group">
@@ -73,18 +73,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
 
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="tipocliente">Tipo de Cliente</label>
-                                            <select class="form-control" name="tipocliente" required>
-                                                <option>Organizadora de Eventos</option>
-                                                <option>Propria Associação</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
 
 
 

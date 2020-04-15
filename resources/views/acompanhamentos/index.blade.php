@@ -36,12 +36,12 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="panel panel-default">
-                        <div class="panel-heading">Lista de Clientes</div>
-                        <form method="GET" action="{{route('clientes.index', 'buscar' )}}">
+                        <div class="panel-heading">Lista de Acompanhamentos</div>
+                        <form method="GET" action="{{route('acompanhamentos.index', 'buscar' )}}">
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="input-group">
-                                        <input type="text"  style="text-transform:uppercase;" class="form-control" placeholder="Digite o nome do cliente"
+                                        <input type="text"  style="text-transform:uppercase;" class="form-control" placeholder="Digite o nome do acompanhamento"
                                             name="buscar">
                                         <span class="input-group-btn">
                                             <button class="btn btn-info"
@@ -64,20 +64,20 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach($clientes as $cliente)
+                                        @foreach($acompanhamentos as $acompanhamento)
                                         <tr>
-                                            <td>{{$cliente->nome}}</td>
-                                            <td>{{$cliente->email}}</td>
-                                            <td>{{$cliente->telefone}}</td>
-                                            <td>{{$cliente->tipocliente}}</td>
+                                            <td>{{$acompanhamento->nome}}</td>
+                                            <td>{{$acompanhamento->email}}</td>
+                                            <td>{{$acompanhamento->telefone}}</td>
+                                            <td>{{$acompanhamento->tipocliente}}</td>
 
 
                                             <td>
-                                                <a href="{{route('clientes.edit', $cliente->id)}}"><i
+                                                <a href="{{route('acompanhamentos.edit', $acompanhamento->id)}}"><i
                                                         class="glyphicon glyphicon-pencil"></i></a>
-                                                <a href="{{route('clientes.remove', $cliente->id)}}"><i
+                                                <a href="{{route('acompanhamentos.remove', $acompanhamento->id)}}"><i
                                                         class="glyphicon glyphicon-trash"></i></a>
-                                                <a href="{{route('clientes.show', $cliente->id)}}"><i
+                                                <a href="{{route('acompanhamentos.show', $acompanhamento->id)}}"><i
                                                         class="glyphicon glyphicon-zoom-in"></i></a>
                                             </td>
                                         </tr>
@@ -87,11 +87,11 @@
                             </div>
                         </div>
                         <div align="center" class="row">
-                            {{ $clientes->links() }}
+                            {{ $acompanhamentos->links() }}
 
                         </div>
                     </div>
-                    <a href="{{route('clientes.create')}}"><button class="btn btn-primary">Adicionar</button></a>
+                    <a href="{{route('acompanhamentos.create')}}"><button class="btn btn-primary">Adicionar</button></a>
                 </div>
             </div>
         </div>

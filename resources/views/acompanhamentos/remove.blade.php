@@ -1,7 +1,6 @@
 @extends('shared.base')
 @section('content')
 
-
 <body>
     {{--AQUI VAI SER CONSTRIODO O MENU DA APLICAÇÃO!!! --}}
     <nav class="navbar navbar-inverse float-left">
@@ -35,28 +34,33 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
+
                     <div class="panel panel-default">
-                        <!-- Default panel contents -->
-                        <div class="panel-heading">Detalhes do Cliente</div>
+                        <div class="panel-heading">Remover o Acompanhamento</div>
                         <div class="panel-body">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <a href="{{ url()->previous() }}" class="btn btn-info">Voltar</a>
-                                    <h4>Sobre o Cliente</h4>
-                                    <p>Nome: {{$clientes->nome}}</p>
-                                    <p>E-Mail: {{$clientes->email}}</p>
-                                    <p>Telefone: {{$clientes->telefone}}</p>
-                                    <p>Tipo de Cliente: {{$clientes->tipocliente}}</p>
-                                    <p style="text-align: justify">Customizações: {{$clientes->customizacoes}}</p>
-                                    <p style="text-align: justify">Observações: {{$clientes->observacoes}}</p>
+                            <form method="post" action="{{route ('acompanhamentos.destroy', $acompanhamentos->id)}}">
+                                <input type="hidden" name="_method" value="DELETE">
+                                {{ csrf_field() }}
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h4>Tem certeza que deseja remover o acompanhamento?</h4>
+                                        <hr>
+                                        <h4>Sobre o acompanhamento</h4>
+                                        <p>Nome: {{$acompanhamentos->nome}}</p>
+                                        <p>E-Mail: {{$acompanhamentos->email}}</p>
+                                        <p>Telefone: {{$acompanhamentos->telefone}}</p>
+                                        <p>Tipo de acompanhamento: {{$acompanhamentos->tipocliente}}</p>
+                                    </div>
                                 </div>
-                            </div>
+                                <button type="submit" class="btn btn-danger">Remover</button>
+                                <a href="{{ url()->previous() }}" class="btn btn-default">Cancelar</a>
+                            </form>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
 </body>
-
 @endsection

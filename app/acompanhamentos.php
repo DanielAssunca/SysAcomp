@@ -13,4 +13,8 @@ class acompanhamentos extends Model
 
     ];
     protected $table = "acompanhamentos";
+
+    public function clientes(){
+        return $this->belongsTo('App\clientes', 'clientes_eventos_id');
+    }
 }

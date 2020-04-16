@@ -68,7 +68,15 @@
                                             </div>
                                         </div>
 
-
+                                        <div class="form-group">
+                                            <label for="eventos_id">Selecione o Evento</label>
+                                            <select class="form-control" name="eventos_id" required>
+                                                @foreach($eventos as $evento)
+                                                <option value="{{$evento->clientes_eventos_id}}">
+                                                    {{$evento->nome}}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
                                 </div>
 
 

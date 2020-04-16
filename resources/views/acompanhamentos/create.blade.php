@@ -52,26 +52,23 @@
                             <form method="post" action="{{route ('acompanhamentos.store')}}">
                                 {{ csrf_field() }}
 
-                                <div class="form-group">
-                                    <label for="nome">Nome Fantasia</label>
-                                    <input type="text" class="form-control" placeholder="Nome Fantasia" name="nome"
-                                        required>
-                                </div>
+
                                 <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="email">E-mail</label>
-                                            <input type="email" class="form-control" placeholder="e-mail" name="email"
-                                                required>
+
+                                        <div class="col-md-6">
+
+                                            <div class="form-group">
+                                                <label for="clientes_id">Selecione o Cliente</label>
+                                                <select class="form-control" name="clientes_id" required>
+                                                    @foreach($clientes as $cliente)
+                                                    <option value="{{$cliente->id}}">
+                                                        {{$cliente->nome}}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="telefone">Telefone</label>
-                                            <input type="tel" class="form-control" placeholder="Telefone de Contato"
-                                                required name="telefone">
-                                        </div>
-                                    </div>
+
+
                                 </div>
 
 

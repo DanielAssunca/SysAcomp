@@ -33,6 +33,9 @@ class acompanhamentosController extends Controller
 
     public function create()
     {
+        $clientes = clientes::all();
+        return view('acompanhamentos.create', compact('clientes'));
+
         $eventos = eventos::all();
         return view('acompanhamentos.create', compact('eventos'));
     }
@@ -46,7 +49,7 @@ class acompanhamentosController extends Controller
             return $page;
         });
         if ($buscar) {
-            $acompanhamentos = DB::table('acompanhamentos')->where('nome', 'ilike', '%'.$buscar.'%')->paginate($qtd);
+            $acompanhamentos = DB::table('acompanhamentos')->where('nome', 'ilike', '%' . $buscar . '%')->paginate($qtd);
         } else {
             $acompanhamentos = DB::table('acompanhamentos')->paginate($qtd);
         }

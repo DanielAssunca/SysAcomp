@@ -17,5 +17,12 @@ class clientes extends Model
     public function eventos(){
         return $this->hasMany('App\eventos', 'clientes_id');
     }
+
+
+    public function acompanhamentos(){
+        return $this->hasMany('App\acompanhamentos', 'clientes_id');
+    }
+
+
 }
 

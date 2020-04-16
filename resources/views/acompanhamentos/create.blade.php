@@ -68,15 +68,6 @@
                                             </div>
                                         </div>
 
-                                        <div class="form-group">
-                                            <label for="eventos_id">Selecione o Evento</label>
-                                            <select class="form-control" name="eventos_id" required>
-                                                @foreach($eventos as $evento)
-                                                <option value="{{$evento->clientes_eventos_id}}">
-                                                    {{$evento->nome}}</option>
-                                                @endforeach
-                                            </select>
-                                        </div>
                                 </div>
 
 
@@ -84,70 +75,6 @@
 
                                 <div class="row">
 
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <label>Cep:
-                                                    <input class="form-control" name="cep" type="text" id="cep" value=""
-                                                        size="10" maxlength="9" onblur="pesquisacep(this.value);" />
-                                                </label><br />
-
-                                                <label>Rua:
-                                                    <input class="form-control" name="rua" type="text" id="rua"
-                                                        size="60" /></label><br />
-                                                <label>Bairro:
-                                                    <input class="form-control" name="bairro" type="text" id="bairro"
-                                                        size="40" /></label><br />
-
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <label>Cidade:
-                                                    <input class="form-control" name="cidade" type="text" id="cidade"
-                                                        size="40" /></label><br />
-                                                <label>Estado:
-                                                    <input class="form-control" name="uf" type="text" id="uf"
-                                                        size="2" /></label><br />
-                                                <label>IBGE:
-                                                    <input class="form-control" name="ibge" type="text" id="ibge"
-                                                        size="8" /></label><br />
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="row">
-
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">Customizações:</span>
-                                                </div>
-                                                <textarea name="customizacoes"
-                                                    style="margin: 0px; width: 538px;height: 230px;"
-                                                    class="form-control" aria-label="With textarea"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">Observações:</span>
-                                                </div>
-                                                <textarea name="observacoes"
-                                                    style="margin: 0px; width: 538px; height: 230px;"
-                                                    class="form-control" aria-label="With textarea"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
 
 
 

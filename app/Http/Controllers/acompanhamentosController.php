@@ -14,16 +14,16 @@ use Illuminate\Pagination\Paginator;
 
 class acompanhamentosController extends Controller
 {
-    protected function validaracompanhamentos($request)
-    {
-        $validator = Validator::make($request->all(), [
-            "nome" => "required",
-            "email" => "required"
+    //protected function validaracompanhamentos($request)
+    //{
+      //  $validator = Validator::make($request->all(), [
+          //  "nome" => "required",
+           // "email" => "required"
 
 
-        ]);
-        return $validator;
-    }
+      //  ]);
+       // return $validator;
+   // }
 
     /**
      * Display a listing of the resource.
@@ -36,7 +36,7 @@ class acompanhamentosController extends Controller
         $clientes = clientes::all();
         return view('acompanhamentos.create', compact('clientes'));
 
-        //$eventos = eventos::all();
+        //$eventos = eventos::all(clientes_eventos_id->$clienteid);
        // return view('acompanhamentos.create', compact('eventos'));
     }
 
@@ -71,10 +71,10 @@ class acompanhamentosController extends Controller
      */
     public function store(Request $request)
     {
-        $validator = $this->validaracompanhamentos($request);
-        if ($validator->fails()) {
-            return redirect()->back()->withErrors($validator->errors());
-        }
+       // $validator = $this->validaracompanhamentos($request);
+        //if ($validator->fails()) {
+          //  return redirect()->back()->withErrors($validator->errors());
+       // }
 
         $dados = $request->all();
         acompanhamentos::create($dados);

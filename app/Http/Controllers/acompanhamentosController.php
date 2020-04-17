@@ -39,8 +39,7 @@ class acompanhamentosController extends Controller
 
         return view('acompanhamentos.create', compact('clientes', 'eventos'));
 
-        //$eventos = eventos::all(clientes_eventos_id->$clienteid);
-       // return view('acompanhamentos.create', compact('eventos'));
+
     }
 
     public function index(Request $request)
@@ -59,6 +58,25 @@ class acompanhamentosController extends Controller
         $acompanhamentos = $acompanhamentos->appends(Request::capture()->except('page'));
         return view('acompanhamentos.index', compact('acompanhamentos'));
     }
+
+    public function lista(Request $request)
+    {
+        $qtd = $request['qtd'] ?: 4;
+        $page = $request['page'] ?: 1;
+        $buscar = $request['buscar'];
+        Paginator::currentPageResolver(function () use ($page) {
+            return $page;
+        });
+        if ($buscar) {
+            $acompanhamentos = DB::table('acompanhamentos')->where('nome', 'ilike', '%' . $buscar . '%')->paginate($qtd);
+        } else {
+            $acompanhamentos = DB::table('acompanhamentos')->paginate($qtd);
+        }
+        $acompanhamentos = $acompanhamentos->appends(Request::capture()->except('page'));
+        return $acompanhamentos;
+
+    }
+
 
     /**
      * Show the form for creating a new resource.

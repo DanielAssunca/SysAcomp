@@ -112,3 +112,26 @@
 
 </body>
 @endsection
+
+@section('script')
+<script>
+
+$(document).ready(function(){
+
+$.ajax({
+    url: '/clientes',
+    type: 'GET',
+    success: function(data){console.log(data);
+
+    },
+    error: function(error){
+        alert("ERRO!");
+
+    }
+})
+});
+
+</script>
+
+
+@endsection

@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Fri Apr 17 2020 11:02:50 GMT-0300 (Horário Padrão de Brasília)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/acompanhamentosController.php
+
+
+Created files:
+* .autogit/logs/log-17-3-2020-10-32-43.txt
+
+
+Deleted files:
+
+
+Renamed files:

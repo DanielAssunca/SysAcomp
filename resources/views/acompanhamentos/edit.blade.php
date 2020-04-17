@@ -54,98 +54,26 @@
                                 {{ csrf_field() }}
                                 <h4>Dados do acompanhamento</h4>
                                 <hr>
-
-                                <div class="form-group">
-                                    <label for="nome">Nome Fantasia</label>
-                                    <input type="text" class="form-control" placeholder="Nome Fantasia" name="nome"
-                                        required value="{{$acompanhamentos->nome}}">
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="email">E-mail</label>
-                                            <input type="email" class="form-control" placeholder="e-mail" name="email"
-                                                required value="{{$acompanhamentos->email}}">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="telefone">Telefone</label>
-                                            <input type="tel" class="form-control" placeholder="Telefone de Contato"
-                                                name="telefone" required value="{{$acompanhamentos->telefone}}">
-                                        </div>
-                                    </div>
-                                </div>
-
                                 <div class="row">
 
                                     <div class="col-md-6">
+
                                         <div class="form-group">
-                                            <div class="input-group">
-                                                <label>Cep:
-                                                    <input class="form-control" name="cep" type="text" id="cep"
-                                                        size="10" value="{{$acompanhamentos->cep}}" maxlength="9" onblur="pesquisacep(this.value);" />
-                                                </label><br />
-
-                                                <label>Rua:
-                                                    <input class="form-control" name="rua" type="text" id="rua"
-                                                        size="60"value="{{$acompanhamentos->rua}}"></label><br />
-                                                <label>Bairro:
-                                                    <input class="form-control" name="bairro" type="text" id="bairro"
-                                                        size="40" value="{{$acompanhamentos->bairro}}"></label><br />
-
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <label>Cidade:
-                                                    <input class="form-control" name="cidade" type="text" id="cidade"
-                                                        size="40" value="{{$acompanhamentos->cidade}}"></label><br />
-                                                <label>Estado:
-                                                    <input class="form-control" name="uf" type="text" id="uf"
-                                                        size="2" value="{{$acompanhamentos->uf}}"></label><br />
-                                                <label>IBGE:
-                                                    <input class="form-control" name="ibge" type="text" id="ibge"
-                                                        size="8" value="{{$acompanhamentos->ibge}}"></label><br />
-                                            </div>
+                                            <label for="clientes_id">Selecione o Cliente</label>
+                                            <select class="form-control" name="clientes_id" required>
+                                                <option>Selecione</option>
+                                                @foreach($clientes as $cliente)
+                                                <option value="{{$cliente->id}}"
+                                                    {{(isset($acompanhamento->cliente_id) && $acompanhamento->cliente_id == $cliente->id ?
+                                                    'selected' : '')}}>{{$cliente->nome}}
+                                                    </option>
+                                                @endforeach
+                                            </select>
                                         </div>
                                     </div>
 
                                 </div>
 
-                                <div class="row">
-
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">Customizações:</span>
-                                                </div>
-                                                <textarea name="customizacoes"
-                                                    style="margin: 0px; width: 538px;height: 230px;"
-                                                    class="form-control" aria-label="With textarea"> {{$acompanhamentos->customizacoes}}
-                                                </textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">Observações:</span>
-                                                </div>
-                                                <textarea name="observacoes"
-                                                    style="margin: 0px; width: 538px; height: 230px;"
-                                                    class="form-control"
-                                                    aria-label="With textarea">{{$acompanhamentos->observacoes}}</textarea>
-                                            </div>
-                                        </div>
-                                    </div>
 
                                     <div class="col-md-6">
                                         <div class="form-group">
@@ -153,7 +81,7 @@
                                             <button type="submit" class="btn btn-primary">Editar</button>
                                         </div>
                                     </div>
-                                </div>
+
                             </form>
                         </div>
                     </div>

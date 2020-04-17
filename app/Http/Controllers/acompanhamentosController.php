@@ -16,14 +16,14 @@ class acompanhamentosController extends Controller
 {
     //protected function validaracompanhamentos($request)
     //{
-      //  $validator = Validator::make($request->all(), [
-          //  "nome" => "required",
-           // "email" => "required"
+    //  $validator = Validator::make($request->all(), [
+    //  "nome" => "required",
+    // "email" => "required"
 
 
-      //  ]);
-       // return $validator;
-   // }
+    //  ]);
+    // return $validator;
+    // }
 
     /**
      * Display a listing of the resource.
@@ -34,12 +34,8 @@ class acompanhamentosController extends Controller
     public function create()
     {
         $clientes = clientes::all();
-        $eventos = eventos::all();
 
-
-        return view('acompanhamentos.create', compact('clientes', 'eventos'));
-
-
+        return view('acompanhamentos.create', compact('clientes'));
     }
 
     public function index(Request $request)
@@ -51,7 +47,7 @@ class acompanhamentosController extends Controller
             return $page;
         });
         if ($buscar) {
-            $acompanhamentos = DB::table('acompanhamentos');//->where('nome', 'ilike', '%' . $buscar . '%')->paginate($qtd);
+            $acompanhamentos = DB::table('acompanhamentos'); //->where('nome', 'ilike', '%' . $buscar . '%')->paginate($qtd);
         } else {
             $acompanhamentos = DB::table('acompanhamentos')->paginate($qtd);
         }
@@ -76,10 +72,10 @@ class acompanhamentosController extends Controller
      */
     public function store(Request $request)
     {
-       // $validator = $this->validaracompanhamentos($request);
+        // $validator = $this->validaracompanhamentos($request);
         //if ($validator->fails()) {
-          //  return redirect()->back()->withErrors($validator->errors());
-       // }
+        //  return redirect()->back()->withErrors($validator->errors());
+        // }
 
         $dados = $request->all();
         acompanhamentos::create($dados);
@@ -107,10 +103,10 @@ class acompanhamentosController extends Controller
      */
     public function edit($id)
     {
-        $acompanhamentos = acompanhamentos::find($id);
-        return view('acompanhamentos.edit', compact('acompanhamentos'));
-    }
 
+        $clientes = clientes::find($id);
+        return view('acompanhamentos.edit', compact('clientes'));
+    }
     /**
      * Update the specified resource in storage.
      *

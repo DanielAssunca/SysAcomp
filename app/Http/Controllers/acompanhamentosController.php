@@ -34,7 +34,7 @@ class acompanhamentosController extends Controller
     public function create()
     {
         $clientes = clientes::all();
-        $eventos = DB::select('select * from eventos where clientes_id = ?', [1]);
+        $eventos = eventos::all();
 
 
         return view('acompanhamentos.create', compact('clientes', 'eventos'));

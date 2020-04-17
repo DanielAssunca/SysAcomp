@@ -58,8 +58,8 @@
                                     <thead>
                                         <tr>
                                             <th>Nome</th>
-                                            <th>Email</th>
-                                            <th>Telefone</th>
+                                            <th>Cliente</th>
+                                            <th>Evento</th>
                                             <th>Tipo de Cliente</th>
                                         </tr>
                                     </thead>
@@ -68,6 +68,7 @@
                                         <tr>
                                             <td>{{$acompanhamento->data_acompanhamento}}</td>
                                             <td>{{$acompanhamento->clientes_id}}</td>
+                                            <td>{{$acompanhamento->eventos_id}}</td>
                                             <td>{{$acompanhamento->tickets}}</td>
                                             <td>{{$acompanhamento->reclamações}}</td>
 

@@ -74,6 +74,8 @@
                                                 @foreach($eventos as $evento)
                                                 <option value="{{$evento->id}}">
                                                     {{$evento->nome}}</option>
+
+
                                                 @endforeach
                                             </select>
                                         </div>

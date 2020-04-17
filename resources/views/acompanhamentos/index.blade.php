@@ -66,10 +66,10 @@
                                     <tbody>
                                         @foreach($acompanhamentos as $acompanhamento)
                                         <tr>
-                                            <td>{{$acompanhamento->nome}}</td>
-                                            <td>{{$acompanhamento->email}}</td>
-                                            <td>{{$acompanhamento->telefone}}</td>
-                                            <td>{{$acompanhamento->tipocliente}}</td>
+                                            <td>{{$acompanhamento->data_acompanhamento}}</td>
+                                            <td>{{$acompanhamento->clientes_id}}</td>
+                                            <td>{{$acompanhamento->tickets}}</td>
+                                            <td>{{$acompanhamento->reclamações}}</td>
 
 
                                             <td>

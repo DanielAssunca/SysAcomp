@@ -8,7 +8,7 @@ class acompanhamentos extends Model
 {
     protected $fillable = [
         "id",
-        "clientes_id", "usuarios_id", "data_acompanhamento", "regras_de_acordo", "parcelamento_de_acordo", "categorias_de_acordo",
+        "clientes_id", "usuarios_id", "eventos_id", "data_acompanhamento", "regras_de_acordo", "parcelamento_de_acordo", "categorias_de_acordo",
         "certificados_de_acordo", "deadlines_de_acordo", "planos_igualsite", "vencimento_de_acordo", "tickets", "reclamações"
 
     ];
@@ -16,5 +16,9 @@ class acompanhamentos extends Model
 
     public function clientes(){
         return $this->belongsTo('App\clientes', 'clientes_id');
+    }
+
+    public function eventos(){
+        return $this->belongsTo('App\eventos', 'eventos_id');
     }
 }

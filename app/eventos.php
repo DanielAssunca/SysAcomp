@@ -21,4 +21,8 @@ class eventos extends Model
         return $this->hasMany('App\contatos', 'eventos_id');
     }
 
+    public function acompanhamentos(){
+        return $this->hasMany('App\acompanhamentos', 'clientes_id');
+    }
+
 }

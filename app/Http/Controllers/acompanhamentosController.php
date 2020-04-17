@@ -31,10 +31,10 @@ class acompanhamentosController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function create()
+    public function create($id)
     {
         $clientes = clientes::all();
-        $eventos = eventos::find('clientes_id');
+        $eventos = DB::select('select * from eventos where clientes_id = ?', [$clientes->id]);
 
 
         return view('acompanhamentos.create', compact('clientes', 'eventos'));

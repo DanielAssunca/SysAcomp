@@ -53,29 +53,14 @@ class acompanhamentosController extends Controller
         if ($buscar) {
             $acompanhamentos = DB::table('acompanhamentos')->where('nome', 'ilike', '%' . $buscar . '%')->paginate($qtd);
         } else {
-            $acompanhamentos = DB::table('acompanhamentos')->paginate($qtd);
+            $acompanhamentos = DB::table('a
+            companhamentos')->paginate($qtd);
         }
         $acompanhamentos = $acompanhamentos->appends(Request::capture()->except('page'));
         return view('acompanhamentos.index', compact('acompanhamentos'));
     }
 
-    public function lista(Request $request)
-    {
-        $qtd = $request['qtd'] ?: 4;
-        $page = $request['page'] ?: 1;
-        $buscar = $request['buscar'];
-        Paginator::currentPageResolver(function () use ($page) {
-            return $page;
-        });
-        if ($buscar) {
-            $acompanhamentos = DB::table('acompanhamentos')->where('nome', 'ilike', '%' . $buscar . '%')->paginate($qtd);
-        } else {
-            $acompanhamentos = DB::table('acompanhamentos')->paginate($qtd);
-        }
-        $acompanhamentos = $acompanhamentos->appends(Request::capture()->except('page'));
-        return $acompanhamentos;
 
-    }
 
 
     /**

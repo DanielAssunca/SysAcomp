@@ -119,7 +119,7 @@
 $(document).ready(function(){
 
 $.ajax({
-    url: '/clientes',
+    url: '/clientes/lista',
     type: 'GET',
     success: function(data){console.log(data);
 

@@ -53,14 +53,16 @@
                                 {{ csrf_field() }}
 
 
-                                <div class="row">
+                                    <div class="row">
 
                                         <div class="col-md-6">
 
                                             <div class="form-group">
                                                 <label for="clientes_id">Selecione o Cliente</label>
                                                 <select class="form-control" name="clientes_id" required>
+                                                    <option>Selecione</option>
                                                     @foreach($clientes as $cliente)
+
                                                     <option value="{{$cliente->id}}">
                                                         {{$cliente->nome}}</option>
                                                     @endforeach
@@ -70,6 +72,7 @@
                                             <div class="form-group">
                                                 <label for="eventos_id">Selecione o Evento</label>
                                                 <select class="form-control" name="eventos_id" required>
+                                                    <option>Selecione</option>
                                                     @foreach($eventos as $evento)
                                                     <option value="{{$evento->id}}">
                                                         {{$evento->nome}}</option>
@@ -78,6 +81,7 @@
                                             </div>
                                         </div>
                                     </div>
+
 
 
 

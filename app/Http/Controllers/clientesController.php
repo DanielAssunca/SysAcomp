@@ -51,14 +51,6 @@ class clientesController extends Controller
         return view('clientes.index', compact('clientes'));
     }
 
-    public function lista()
-    {
-
-     return clientes::all();
-
-
-
-    }
 
     /**
      * Show the form for creating a new resource.

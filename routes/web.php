@@ -25,7 +25,6 @@ Route::resource('contatos', 'contatosController');
 Route::get('/acompanhamentos/remove/{id}', 'acompanhamentosController@remover')->name('acompanhamentos.remove');
 Route::resource('acompanhamentos', 'acompanhamentosController');
 
-Route::get('/clientes/lista', 'clientesController@lista');
 
 
 Route::resource('home', 'HomeController');

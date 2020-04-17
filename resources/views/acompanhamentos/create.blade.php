@@ -59,7 +59,7 @@
 
                                             <div class="form-group">
                                                 <label for="clientes_id">Selecione o Cliente</label>
-                                                <select class="form-control" name="clientes_id" required>
+                                                <select id="select-cliente" class="form-control" name="clientes_id" required>
                                                     <option>Selecione</option>
                                                     @foreach($clientes as $cliente)
 
@@ -83,15 +83,6 @@
                                     </div>
 
 
-
-
-
-
-                                <div class="row">
-
-
-
-
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <a href="{{ url()->previous() }}" class="btn btn-info">Voltar</a>
@@ -113,25 +104,3 @@
 </body>
 @endsection
 
-@section('script')
-<script>
-
-$(document).ready(function(){
-
-$.ajax({
-    url: '/clientes/lista',
-    type: 'GET',
-    success: function(data){console.log(data);
-
-    },
-    error: function(error){
-        alert("ERRO!");
-
-    }
-})
-});
-
-</script>
-
-
-@endsection

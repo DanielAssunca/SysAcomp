@@ -51,10 +51,9 @@ class acompanhamentosController extends Controller
             return $page;
         });
         if ($buscar) {
-            $acompanhamentos = DB::table('acompanhamentos')->where('nome', 'ilike', '%' . $buscar . '%')->paginate($qtd);
+            $acompanhamentos = DB::table('acompanhamentos');//->where('nome', 'ilike', '%' . $buscar . '%')->paginate($qtd);
         } else {
-            $acompanhamentos = DB::table('a
-            companhamentos')->paginate($qtd);
+            $acompanhamentos = DB::table('acompanhamentos')->paginate($qtd);
         }
         $acompanhamentos = $acompanhamentos->appends(Request::capture()->except('page'));
         return view('acompanhamentos.index', compact('acompanhamentos'));

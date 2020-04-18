@@ -60,15 +60,18 @@
                                     <div class="form-group">
                                         <label for="eventos_id">Selecione o Evento</label>
                                         <select class="form-control" name="eventos_id" required>
-
                                             @foreach($eventos as $evento)
-                                            <option value="{{$evento->id}}"
-                                                {{(isset($acompanhamento->eventos_id) && $acompanhamento->eventos_id == $evento->id ?
-                                                'selected' : '')}}>{{$evento->nome}}
-                                                </option>
+                                            <option>
+                                                {{$evento->nome}}</option>
                                             @endforeach
                                         </select>
+
                                     </div>
+
+                                    <label for="email">E-mail</label>
+                                    <input type="email" class="form-control" placeholder="e-mail" name="email"
+                                        required value="{{$contatos->email}}">
+
                                 </div>
 
 
@@ -77,14 +80,14 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
 
-                                                <label for="nome">Nome</label>
-                                                <input type="text" class="form-control" placeholder="Nome do contato" name="nome"
-                                                    required value="{{$contatos->nome}}">
+                                            <label for="nome">Nome</label>
+                                            <input type="text" class="form-control" placeholder="Nome do contato" name="nome"
+                                                required value="{{$contatos->nome}}">
 
 
-                                            <label for="email">E-mail</label>
-                                            <input type="email" class="form-control" placeholder="e-mail" name="email"
-                                                required value="{{$contatos->email}}">
+
+
+
                                         </div>
                                     </div>
                                     <div class="col-md-6">

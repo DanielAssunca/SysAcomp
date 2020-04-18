@@ -102,7 +102,7 @@ class contatosController extends Controller
     public function edit($id)
     {
         $contatos = contatos::find($id);
-        $eventos = eventos::all();
+        $eventos = DB::select('select eventos.nome FROM eventos, contatos where eventos.id = contatos.eventos_id');
         return view('contatos.edit', compact('contatos', 'eventos'));
     }
 

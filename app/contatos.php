@@ -8,11 +8,11 @@ class contatos extends Model
 {
     protected $fillable = [
         "id","eventos_id",
-        "nome", "email", "celular", "telefone", "skype", "modinscricoes"
+        "nome", "email", "celular", "telefone", "skype", "modinscricoes","eventos_id"
     ];
-    protected $table = "contatos";
+    //protected $table = "contatos";
 
-    public function eventos(){
+    public function evento(){
         return $this->belongsTo('App\eventos', 'eventos_id');
     }
 }

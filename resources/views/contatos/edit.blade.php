@@ -55,14 +55,33 @@
                                 <h4>Dados do contato</h4>
                                 <hr>
 
-                                <div class="form-group">
-                                    <label for="nome">Nome</label>
-                                    <input type="text" class="form-control" placeholder="Nome do contato" name="nome"
-                                        required value="{{$contatos->nome}}">
+                                <div class="col-md-6">
+
+                                    <div class="form-group">
+                                        <label for="eventos_id">Selecione o Evento</label>
+                                        <select class="form-control" name="eventos_id" required>
+
+                                            @foreach($eventos as $evento)
+                                            <option value="{{$evento->id}}"
+                                                {{(isset($acompanhamento->eventos_id) && $acompanhamento->eventos_id == $evento->id ?
+                                                'selected' : '')}}>{{$evento->nome}}
+                                                </option>
+                                            @endforeach
+                                        </select>
+                                    </div>
                                 </div>
+
+
+
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
+
+                                                <label for="nome">Nome</label>
+                                                <input type="text" class="form-control" placeholder="Nome do contato" name="nome"
+                                                    required value="{{$contatos->nome}}">
+
+
                                             <label for="email">E-mail</label>
                                             <input type="email" class="form-control" placeholder="e-mail" name="email"
                                                 required value="{{$contatos->email}}">

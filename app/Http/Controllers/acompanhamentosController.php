@@ -104,8 +104,9 @@ class acompanhamentosController extends Controller
     public function edit($id)
     {
 
-        $clientes = clientes::find($id);
-        return view('acompanhamentos.edit', compact('clientes'));
+        $acompanhamento = acompanhamentos::find($id);
+        $cliente =  clientes::all();
+        return view('acompanhamentos.edit', compact('acompanhamento', 'cliente'));
     }
     /**
      * Update the specified resource in storage.

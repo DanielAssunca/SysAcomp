@@ -10,7 +10,7 @@ class eventos extends Model
          "data_evento", "valida_socio", "site_evento", "site_entidade", "nome",
         "localevento",  "cod_centro_de_custo"
     ];
-    protected $table = "eventos";
+   // protected $table = "eventos";
 
     ///Aqui em baixo é o relacionamento 1:N UM CLIENTE PODE TER VARIOS EVENTOS (belongsTo)
     public function clientes(){

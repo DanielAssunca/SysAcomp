@@ -49,7 +49,7 @@
                         </div>
                         <div class="panel-body">
 
-                            <form method="post" action="{{route ('acompanhamentos.update', $acompanhamentos->id)}}">
+                            <form method="post" action="{{route ('acompanhamentos.update', $acompanhamento->id)}}">
                                 <input type="hidden" name="_method" value="PUT">
                                 {{ csrf_field() }}
                                 <h4>Dados do acompanhamento</h4>
@@ -61,7 +61,7 @@
                                         <div class="form-group">
                                             <label for="clientes_id">Selecione o Cliente</label>
                                             <select class="form-control" name="clientes_id" required>
-                                                <option>Selecione</option>
+
                                                 @foreach($clientes as $cliente)
                                                 <option value="{{$cliente->id}}"
                                                     {{(isset($acompanhamento->cliente_id) && $acompanhamento->cliente_id == $cliente->id ?

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-
+use App\clientes;
 use Illuminate\Http\Request;
 use Validator;
 use App\contatos;
@@ -13,22 +13,25 @@ use Illuminate\Pagination\Paginator;
 class contatosController extends Controller
 {
 
-    protected function validarcontatos($request)
-    {
-        $validator = Validator::make($request->all(), [
-            "nome" => "required",
-            "email" => "required"
-
-
-        ]);
-        return $validator;
-    }
 
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+
+
+   // protected function validarcontatos($request)
+   // {
+     //   $validator = Validator::make($request->all(), [
+       //     "nome" => "required",
+         //   "email" => "required",
+           // "telefone" => "required | numeric"
+
+        //]);
+        //return $validator;
+    //}
+
 
     public function create()
     {
@@ -45,7 +48,7 @@ class contatosController extends Controller
             return $page;
         });
         if ($buscar) {
-            $contatos = DB::table('contatos')->where('nome', 'ilike', '%'.$buscar.'%')->paginate($qtd);
+            $contatos = DB::table('contatos')->where('nome', 'ilike', '%' . $buscar . '%')->paginate($qtd);
         } else {
             $contatos = DB::table('contatos')->paginate($qtd);
         }
@@ -67,9 +70,9 @@ class contatosController extends Controller
      */
     public function store(Request $request)
     {
-        $validator = $this->validarcontatos($request);
-        if ($validator->fails()) {
-            return redirect()->back()->withErrors($validator->errors());
+       $validator = $this->validarcontatos($request);
+       if ($validator->fails()) {
+            //return redirect()->back()->withErrors($validator->errors());
         }
 
         $dados = $request->all();
@@ -99,8 +102,10 @@ class contatosController extends Controller
     public function edit($id)
     {
         $contatos = contatos::find($id);
-        return view('contatos.edit', compact('contatos'));
+        $eventos = eventos::all();
+        return view('contatos.edit', compact('contatos', 'eventos'));
     }
+
 
     /**
      * Update the specified resource in storage.
@@ -111,10 +116,10 @@ class contatosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $validator = $this->validarcontatos($request);
-        if ($validator->fails()) {
-            return redirect()->back()->withErrors($validator->errors());
-        }
+       // $validator = $this->validarcontatos($request);
+       // if ($validator->fails()) {
+           // return redirect()->back()->withErrors($validator->errors());
+       // }
         $contatos = contatos::find($id);
         $dados = $request->all();
         $contatos->update($dados);

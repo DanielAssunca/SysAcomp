@@ -12,7 +12,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/clientes/remove/{id}', 'ClientesController@remover')->name('clientes.remove');
 Route::resource('clientes', 'clientesController');
 
@@ -24,8 +23,6 @@ Route::resource('contatos', 'contatosController');
 
 Route::get('/acompanhamentos/remove/{id}', 'acompanhamentosController@remover')->name('acompanhamentos.remove');
 Route::resource('acompanhamentos', 'acompanhamentosController');
-
-
 
 Route::resource('home', 'HomeController');
 

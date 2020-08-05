@@ -21,16 +21,16 @@ class contatosController extends Controller
      */
 
 
-   // protected function validarcontatos($request)
-   // {
-     //   $validator = Validator::make($request->all(), [
-       //     "nome" => "required",
-         //   "email" => "required",
-           // "telefone" => "required | numeric"
+   protected function validarcontatos($request)
+    {
+        $validator = Validator::make($request->all(), [
+           "nome" => "required",
+            "email" => "required",
+         "telefone" => "required | numeric"
 
-        //]);
-        //return $validator;
-    //}
+    ]);
+        return $validator;
+    }
 
 
     public function create()
@@ -72,7 +72,7 @@ class contatosController extends Controller
     {
        $validator = $this->validarcontatos($request);
        if ($validator->fails()) {
-            //return redirect()->back()->withErrors($validator->errors());
+            return redirect()->back()->withErrors($validator->errors());
         }
 
         $dados = $request->all();

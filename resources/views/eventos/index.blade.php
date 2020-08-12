@@ -23,7 +23,7 @@
     <div class="main">
         <div class="menu">
             <ul>
-                <li><a href="{{route('home.index')}}">Home</a></li>
+                <li><a href="{{route('index')}}">Home</a></li>
                 <li class="active"><a href="{{route('clientes.index')}}">Clientes</a></li>
                 <li class="active"><a href="{{route('eventos.index')}}">Eventos</a></li>
                 <li class="active"><a href="{{route('contatos.index')}}">Contatos</a></li>

@@ -11,7 +11,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">SyaaasAcomp</a>
+                <a class="navbar-brand" href="#">SysAcomp</a>
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
@@ -47,7 +47,7 @@
                     <div class="col-sm-4 text-center">
                         <div class="panel panel-success">
                             <div class="panel-heading">
-                                <h3 class="panel-title">Acompanhamentosxxxxxxx asasasaRealziados</h3>
+                                <h3 class="panel-title">Acompanhamentos Realziados</h3>
                             </div>
                             <div class="panel-body">
                                 <h3>8</h3>

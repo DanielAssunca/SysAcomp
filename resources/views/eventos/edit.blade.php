@@ -58,6 +58,18 @@
                                 <hr>
 
                                 <div class="form-group">
+                                    <label for="clientes_id">Selecione o Cliente</label>
+                                    <select class="form-control" name="clientes_id" required>
+                                    @foreach($clientes as $cliente)
+                                        <option value="{{$cliente->id}}"
+                                        {{(isset($eventos->clientes_id) && $eventos->clientes_id == $cliente->id ?
+                                        'selected' : '')}}>{{$cliente->nome}}
+                                        </option>
+                                    @endforeach
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
                                     <label for="nome">Nome</label>
                                     <input type="text" class="form-control" placeholder="Nome do Evento" name="nome"
                                         required value="{{$eventos->nome}}">

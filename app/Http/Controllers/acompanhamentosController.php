@@ -34,8 +34,9 @@ class acompanhamentosController extends Controller
     public function create()
     {
         $clientes = clientes::all();
+        $eventos = eventos::all();
 
-        return view('acompanhamentos.create', compact('clientes'));
+        return view('acompanhamentos.create', compact('clientes','eventos'));
     }
 
     public function index(Request $request)

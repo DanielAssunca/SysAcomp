@@ -65,7 +65,7 @@
                                         </div>
                                     </div>
                                     <button type="submit" class="btn btn-danger">Remover</button>
-                                    <a href="{{ url()->previous() }}" class="btn btn-default">Cancelar</a>
+                                    <a href="{{ route('clientes.index') }}" class="btn btn-defaut">Voltar</a>
                                 </form>
                             </div>
                         </div>

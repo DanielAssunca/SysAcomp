@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Validator;
 use App\clientes;
+use App\eventos;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Pagination\Paginator;
 
@@ -130,6 +131,17 @@ class clientesController extends Controller
      */
     public function destroy($id)
     {
+        if(eventos::where('clientes_id', '=', $id)->count()){
+            $msg = "Não é possível excluir este cliente. Os eventos com id ( ";
+            $eventos = eventos::where('clientes_id', '=', $id)->get();
+            foreach($eventos as $evento){
+                $msg .= $evento->id." ";
+            }
+            $msg .= " ) estão relacionados com este cliente!";
+
+            \Session::flash('mensagem', ['msg'=>$msg]);
+            return redirect()->route('clientes.remove', $id);
+        }
         clientes::find($id)->delete();
         return redirect()->route('clientes.index');
     }

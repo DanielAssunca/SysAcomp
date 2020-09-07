@@ -141,4 +141,10 @@ class clientesController extends Controller
 
         return view('clientes.remove', compact('clientes'));
     }
+
+    public function eventos($id)
+    {
+        $clientes = clientes::find($id);
+        return view('clientes.eventos', compact('clientes'));
+    }
 }

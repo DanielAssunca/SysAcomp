@@ -4,6 +4,12 @@ $(document).ready(function(){
     })
 });
 
+function busca_evento_porcliente() {
+    //(Acompanhamento)Popula o select eventos de acordo com o cliente selecionado.
+    var texto = "TESTE JAVA SCIPT";
+    document.getElementById('select_eventos').value=(texto);
+
+}
 
 
 function limpa_formulário_cep() {

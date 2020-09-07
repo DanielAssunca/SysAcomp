@@ -58,6 +58,7 @@
                                     <thead>
                                         <tr>
                                             <th>Nome</th>
+                                            <th>Eventos</th>
                                             <th>Email</th>
                                             <th>Telefone</th>
                                             <th>Tipo de Cliente</th>
@@ -67,6 +68,7 @@
                                         @foreach($clientes as $cliente)
                                         <tr>
                                             <td>{{$cliente->nome}}</td>
+                                            <td><a href="{{route('clientes.eventos', $cliente->id)}}">Listar Eventos</a></td>
                                             <td>{{$cliente->email}}</td>
                                             <td>{{$cliente->telefone}}</td>
                                             <td>{{$cliente->tipocliente}}</td>

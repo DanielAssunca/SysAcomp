@@ -54,6 +54,7 @@
                                 <thead>
                                     <tr>
                                         <th>Nome</th>
+                                        <th>Cliente</th>
                                         <th>Data</th>
                                         <th>Site</th>
                                         <th>Local</th>
@@ -63,6 +64,7 @@
                                     @foreach($eventos as $evento)
                                     <tr>
                                         <td>{{$evento->nome}}</td>
+                                        <td>{{$evento->clientes->nome}}</td>
                                         <td>{{$evento->data_evento}}</td>
                                         <td>{{$evento->site_evento}}</td>
                                         <td>{{$evento->localevento}}</td>

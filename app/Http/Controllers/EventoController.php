@@ -47,10 +47,14 @@ class EventoController extends Controller
             return $page;
         });
         if ($buscar) {
-            $eventos = DB::table('eventos')->where('nome', 'ilike', '%'.$buscar.'%')->paginate($qtd);
+            //$eventos = DB::table('eventos')->where('nome', 'ilike', '%'.$buscar.'%')->paginate($qtd);
+            $eventos = eventos::where('nome', 'ilike', '%'.$buscar.'%')->paginate($qtd);
         } else {
-            $eventos = DB::table('eventos')->paginate($qtd);
+            //$eventos = DB::table('eventos')->paginate($qtd);
+            $eventos = eventos::paginate($qtd);
         }
+
+
         $eventos = $eventos->appends(Request::capture()->except('page'));
         return view('eventos.index', compact('eventos'));
     }

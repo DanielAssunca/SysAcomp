@@ -3,7 +3,7 @@
 @section('content')
 
 <body>
-    {{--AQUI VAI SER CONSTRIODO O MENU DA APLICAÇÃO!!! --}}
+    {{--AQUI VAI SER CONSTRUIDO O MENU DA APLICAÇÃO!!! --}}
     <nav class="navbar navbar-inverse float-left">
         <div class="container-fluid">
             <div class="navbar-header">

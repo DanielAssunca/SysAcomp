@@ -96,6 +96,7 @@ class acompanhamentosController extends Controller
         return view('acompanhamentos.show', compact('acompanhamentos'));
     }
 
+
     /**
      * Show the form for editing the specified resource.
      *

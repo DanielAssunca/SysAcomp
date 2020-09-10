@@ -1,16 +1,15 @@
 $(document).ready(function(){
     $(".navbar-toggle").click(function(){
         $(".menu").toggleClass("menu-open");
-    })
+        $("#select_eventos").attr('disabled',false);
+    });
+
+    $("#select_cliente").change(function(){
+        $("#select_eventos").attr('disabled',false);
+
+    });
+
 });
-
-function busca_evento_porcliente() {
-    //(Acompanhamento)Popula o select eventos de acordo com o cliente selecionado.
-    var texto = "TESTE JAVA SCIPT";
-    document.getElementById('select_eventos').value=(texto);
-
-}
-
 
 function limpa_formulário_cep() {
     //Limpa valores do formulário de cep.
@@ -80,3 +79,6 @@ else {
 }
 
 };
+
+
+

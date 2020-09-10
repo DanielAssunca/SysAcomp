@@ -59,7 +59,7 @@
 
                                             <div class="form-group">
                                                 <label for="clientes_id">Selecione o Cliente</label>
-                                                <select id="select-cliente" class="form-control" name="clientes_id"
+                                                <select name="select_cliente" id="select-cliente" class="form-control"
                                                     required>
                                                     <option>Selecione</option>
                                                     @foreach ($clientes as $cliente)
@@ -73,16 +73,16 @@
                                             {{--AQUI VAI FUNCIONAR CRIANDO UM NOVO METODO
                                             DENTRO DO CONTROLER ACOMPNHAMENTO PARA POPULAR ATRAVEZ DO AJAX VAI SER USADO
                                             AJAX(JAVASCRIPT)!!! --}}
-                                            {{--<div class="form-group">
+                                            <div class="form-group">
                                                 <label for="eventos_id">Selecione o Evento</label>
-                                                <select class="form-control" name="select_eventos" required>
+                                                <select name="select_eventos" id="select_eventos" disabled="true" class="form-control"  required>
                                                     @foreach ($eventos as $evento)
-                                                        <option value={{texto}}>
+                                                        <option>
 
                                                         </option>
                                                     @endforeach
                                                 </select>
-                                            </div> --}}
+                                            </div>
 
 
 

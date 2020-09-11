@@ -59,7 +59,7 @@
 
                                             <div class="form-group">
                                                 <label for="clientes_id">Selecione o Cliente</label>
-                                                <select name="select_cliente" id="select-cliente" class="form-control"
+                                                <select name="select_cliente" id="select_cliente" class="form-control"
                                                     required>
                                                     <option>Selecione</option>
                                                     @foreach ($clientes as $cliente)

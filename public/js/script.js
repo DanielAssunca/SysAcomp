@@ -1,11 +1,12 @@
 $(document).ready(function(){
     $(".navbar-toggle").click(function(){
         $(".menu").toggleClass("menu-open");
-        $("#select_eventos").attr('disabled',false);
+
     });
 
     $("#select_cliente").change(function(){
         $("#select_eventos").attr('disabled',false);
+
 
     });
 

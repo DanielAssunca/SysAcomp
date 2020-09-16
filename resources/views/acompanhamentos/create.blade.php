@@ -25,7 +25,7 @@
             <div class="menu">
                 <ul>
                     <li><a href="{{ route('index') }}">Home</a></li>
-                    <li class="active"><a href="{{ route('clientes.index') }}">Acompanhamentos</a></li>
+                    <li class="active"><a href="{{ route('clientes.index') }}">Clientes</a></li>
                     <li class="active"><a href="{{ route('eventos.index') }}">Eventos</a></li>
                     <li class="active"><a href="{{ route('contatos.index') }}">Contatos</a></li>
                     <li class="active"><a href="{{ route('acompanhamentos.index') }}">Acompanhamentos</a></li>
@@ -75,7 +75,8 @@
                                             AJAX(JAVASCRIPT)!!! --}}
                                             <div class="form-group">
                                                 <label for="eventos_id">Selecione o Evento</label>
-                                                <select name="select_eventos" id="select_eventos" disabled="true" class="form-control"  required>
+                                                <select name="select_eventos" id="select_eventos" disabled="true"
+                                                    class="form-control" required>
                                                     @foreach ($eventos as $evento)
                                                         <option>
 
@@ -84,29 +85,63 @@
                                                 </select>
                                             </div>
 
+                                            <div class="container container-fluid">
+
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="panel panel-default">
+                                                            <div class="panel-heading" style="cursor: pointer"
+                                                                onclick="$('#panel-body-t-geradas-c').toggle(200)">
+                                                                <h3 class="panel-title">
+                                                                    <b>
+                                                                        <center>PLANOS DE PAGAMENTO - CATEGORIAS E FORMAS DE
+                                                                            PAGAMENTO </center>
+                                                                    </b>
+
+                                                                </h3>
+                                                            </div>
+                                                            <div class="panel-body" id="panel-body-t-geradas-c"
+                                                                style="display: none;">
+
+                                                                <div class="row">
+                                                                    <div class="col-md-6">
 
 
+                                                                    </div>
+
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
                                         </div>
                                     </div>
-
-
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <a href="{{ url()->previous() }}" class="btn btn-info">Voltar</a>
-                                            <button type="submit" class="btn btn-primary">Cadastrar</button>
-                                        </div>
-
-                                    </div>
-
+                                </form>
                             </div>
-                            </form>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <a href="{{ url()->previous() }}" class="btn btn-info">Voltar</a>
+                            <button type="submit" class="btn btn-primary">Cadastrar</button>
                         </div>
 
                     </div>
+
+
+
+
+
                 </div>
+
             </div>
         </div>
-        </div>
+
 
     </body>
 @endsection

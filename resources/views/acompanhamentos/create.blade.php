@@ -77,11 +77,7 @@
                                                 <label for="eventos_id">Selecione o Evento</label>
                                                 <select name="select_eventos" id="select_eventos" disabled="true"
                                                     class="form-control" required>
-                                                    @foreach ($eventos as $evento)
-                                                        <option>
 
-                                                        </option>
-                                                    @endforeach
                                                 </select>
                                             </div>
 
@@ -115,6 +111,97 @@
                                                         </div>
                                                     </div>
                                                 </div>
+
+                                                <div class="container container-fluid">
+
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="panel panel-default">
+                                                                <div class="panel-heading" style="cursor: pointer"
+                                                                    onclick="$('#panel-body-t-geradas-c').toggle(200)">
+                                                                    <h3 class="panel-title">
+                                                                        <b>
+                                                                            <center>CONFIGURADORES ATIVOS E MODELOS DE E-MAIL</center>
+                                                                        </b>
+
+                                                                    </h3>
+                                                                </div>
+                                                                <div class="panel-body" id="panel-body-t-geradas-c"
+                                                                    style="display: none;">
+
+                                                                    <div class="row">
+                                                                        <div class="col-md-6">
+
+
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="container container-fluid">
+
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="panel panel-default">
+                                                                    <div class="panel-heading" style="cursor: pointer"
+                                                                        onclick="$('#panel-body-t-geradas-c').toggle(200)">
+                                                                        <h3 class="panel-title">
+                                                                            <b>
+                                                                                <center>VALIDAÇÃO DE SÓCIOS E COMPROVANTES</center>
+                                                                            </b>
+
+                                                                        </h3>
+                                                                    </div>
+                                                                    <div class="panel-body" id="panel-body-t-geradas-c"
+                                                                        style="display: none;">
+
+                                                                        <div class="row">
+                                                                            <div class="col-md-6">
+
+
+                                                                            </div>
+
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="container container-fluid">
+
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <div class="panel panel-default">
+                                                                        <div class="panel-heading" style="cursor: pointer"
+                                                                            onclick="$('#panel-body-t-geradas-c').toggle(200)">
+                                                                            <h3 class="panel-title">
+                                                                                <b>
+                                                                                    <center>TESTE REALIZADOS</center>
+                                                                                </b>
+
+                                                                            </h3>
+                                                                        </div>
+                                                                        <div class="panel-body" id="panel-body-t-geradas-c"
+                                                                            style="display: none;">
+
+                                                                            <div class="row">
+                                                                                <div class="col-md-6">
+
+
+                                                                                </div>
+
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
 
                                             </div>
                                         </div>

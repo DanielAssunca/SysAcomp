@@ -79,7 +79,9 @@ class acompanhamentosController extends Controller
         // }
 
         $dados = $request->all();
+
         acompanhamentos::create($dados);
+
         return redirect()->route('acompanhamentos.index');
     }
 
@@ -149,4 +151,16 @@ class acompanhamentosController extends Controller
 
         return view('acompanhamentos.remove', compact('acompanhamentos'));
     }
+
+    public function getEvento(){
+    $req = request();
+
+    //consultar no banco
+    $rsEventos = DB::table('eventos');
+
+    return response()->json($rsEventos);
+
+}
+
+
 }

@@ -53,181 +53,188 @@
                                     {{ csrf_field() }}
 
 
-                                    <div class="row">
 
-                                        <div class="col-md-6">
+                                    <div class="container">
 
-                                            <div class="form-group">
-                                                <label for="clientes_id">Selecione o Cliente</label>
-                                                <select name="select_cliente" id="select_cliente" class="form-control"
-                                                    required>
-                                                    <option>Selecione</option>
-                                                    @foreach ($clientes as $cliente)
+                                        <div class="row">
+                                            <div class="col-md-7">
 
-                                                        <option value="{{ $cliente->id }}">
-                                                            {{ $cliente->nome }}</option>
-                                                    @endforeach
-                                                </select>
-                                            </div>
+                                                <div class="form-group">
+                                                    <label for="clientes_id">Selecione o Cliente</label>
+                                                    <select name="select_cliente" id="select_cliente" class="form-control"
+                                                        required>
+                                                        <option>Selecione</option>
+                                                        @foreach ($clientes as $cliente)
 
-                                            {{--AQUI VAI FUNCIONAR CRIANDO UM NOVO METODO
-                                            DENTRO DO CONTROLER ACOMPNHAMENTO PARA POPULAR ATRAVEZ DO AJAX VAI SER USADO
-                                            AJAX(JAVASCRIPT)!!! --}}
-                                            <div class="form-group">
-                                                <label for="eventos_id">Selecione o Evento</label>
-                                                <select name="select_eventos" id="select_eventos" disabled="true"
-                                                    class="form-control" required>
-
-                                                </select>
-                                            </div>
-
-                                            <div class="container container-fluid">
-
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <div class="panel panel-default">
-                                                            <div class="panel-heading" style="cursor: pointer"
-                                                                onclick="$('#panel-body-t-geradas-c').toggle(200)">
-                                                                <h3 class="panel-title">
-                                                                    <b>
-                                                                        <center>PLANOS DE PAGAMENTO - CATEGORIAS E FORMAS DE
-                                                                            PAGAMENTO </center>
-                                                                    </b>
-
-                                                                </h3>
-                                                            </div>
-                                                            <div class="panel-body" id="panel-body-t-geradas-c"
-                                                                style="display: none;">
-
-                                                                <div class="row">
-                                                                    <div class="col-md-6">
-
-
-                                                                    </div>
-
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                            <option value="{{ $cliente->id }}">
+                                                                {{ $cliente->nome }}</option>
+                                                        @endforeach
+                                                    </select>
                                                 </div>
+                                                {{--AQUI VAI FUNCIONAR CRIANDO UM NOVO METODO
+                                                DENTRO DO CONTROLER ACOMPNHAMENTO PARA POPULAR ATRAVEZ DO AJAX VAI SER USADO
+                                                AJAX(JAVASCRIPT)!!! --}}
+                                                <div class="form-group">
+                                                    <label for="eventos_id">Selecione o Evento</label>
+                                                    <select name="select_eventos" id="select_eventos" disabled="true"
+                                                        class="form-control" required>
 
-                                                <div class="container container-fluid">
-
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            <div class="panel panel-default">
-                                                                <div class="panel-heading" style="cursor: pointer"
-                                                                    onclick="$('#panel-body-t-geradas-c').toggle(200)">
-                                                                    <h3 class="panel-title">
-                                                                        <b>
-                                                                            <center>CONFIGURADORES ATIVOS E MODELOS DE E-MAIL</center>
-                                                                        </b>
-
-                                                                    </h3>
-                                                                </div>
-                                                                <div class="panel-body" id="panel-body-t-geradas-c"
-                                                                    style="display: none;">
-
-                                                                    <div class="row">
-                                                                        <div class="col-md-6">
-
-
-                                                                        </div>
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-
-                                                    <div class="container container-fluid">
-
-                                                        <div class="row">
-                                                            <div class="col-md-12">
-                                                                <div class="panel panel-default">
-                                                                    <div class="panel-heading" style="cursor: pointer"
-                                                                        onclick="$('#panel-body-t-geradas-c').toggle(200)">
-                                                                        <h3 class="panel-title">
-                                                                            <b>
-                                                                                <center>VALIDAÇÃO DE SÓCIOS E COMPROVANTES</center>
-                                                                            </b>
-
-                                                                        </h3>
-                                                                    </div>
-                                                                    <div class="panel-body" id="panel-body-t-geradas-c"
-                                                                        style="display: none;">
-
-                                                                        <div class="row">
-                                                                            <div class="col-md-6">
-
-
-                                                                            </div>
-
-                                                                        </div>
-
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="container container-fluid">
-
-                                                            <div class="row">
-                                                                <div class="col-md-12">
-                                                                    <div class="panel panel-default">
-                                                                        <div class="panel-heading" style="cursor: pointer"
-                                                                            onclick="$('#panel-body-t-geradas-c').toggle(200)">
-                                                                            <h3 class="panel-title">
-                                                                                <b>
-                                                                                    <center>TESTE REALIZADOS</center>
-                                                                                </b>
-
-                                                                            </h3>
-                                                                        </div>
-                                                                        <div class="panel-body" id="panel-body-t-geradas-c"
-                                                                            style="display: none;">
-
-                                                                            <div class="row">
-                                                                                <div class="col-md-6">
-
-
-                                                                                </div>
-
-                                                                            </div>
-
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                                    </select>
+                                                </div>
 
                                             </div>
                                         </div>
+                                    </div>
+
+
+                                    <div class="container container-fluid">
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading" style="cursor: pointer"
+                                                        onclick="$('#panel-body-t-geradas-c').toggle(200)">
+                                                        <h3 class="panel-title">
+                                                            <b>
+                                                                <center>PLANOS DE PAGAMENTO - CATEGORIAS E FORMAS DE
+                                                                    PAGAMENTO </center>
+                                                            </b>
+
+                                                        </h3>
+                                                    </div>
+                                                    <div class="panel-body" id="panel-body-t-geradas-c"
+                                                        style="display: none;">
+
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+
+
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading" style="cursor: pointer"
+                                                        onclick="$('#panel-body-t-geradas-c').toggle(200)">
+                                                        <h3 class="panel-title">
+                                                            <b>
+                                                                <center>CONFIGURADORES ATIVOS E MODELOS DE
+                                                                    E-MAIL</center>
+                                                            </b>
+
+                                                        </h3>
+                                                    </div>
+                                                    <div class="panel-body" id="panel-body-t-geradas-c"
+                                                        style="display: none;">
+
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+
+
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading" style="cursor: pointer"
+                                                        onclick="$('#panel-body-t-geradas-c').toggle(200)">
+                                                        <h3 class="panel-title">
+                                                            <b>
+                                                                <center>VALIDAÇÃO DE SÓCIOS E COMPROVANTES
+                                                                </center>
+                                                            </b>
+
+                                                        </h3>
+                                                    </div>
+                                                    <div class="panel-body" id="panel-body-t-geradas-c"
+                                                        style="display: none;">
+
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+
+
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading" style="cursor: pointer"
+                                                        onclick="$('#panel-body-t-geradas-c').toggle(200)">
+                                                        <h3 class="panel-title">
+                                                            <b>
+                                                                <center>TESTE REALIZADOS</center>
+                                                            </b>
+
+                                                        </h3>
+                                                    </div>
+                                                    <div class="panel-body" id="panel-body-t-geradas-c"
+                                                        style="display: none;">
+
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+
+
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </form>
                             </div>
                         </div>
                     </div>
 
-
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <a href="{{ url()->previous() }}" class="btn btn-info">Voltar</a>
-                            <button type="submit" class="btn btn-primary">Cadastrar</button>
-                        </div>
-
-                    </div>
-
-
-
-
-
                 </div>
 
             </div>
         </div>
+
+
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <a href="{{ url()->previous() }}" class="btn btn-info">Voltar</a>
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            </div>
+
+        </div>
+
+
+
+
+
 
 
     </body>

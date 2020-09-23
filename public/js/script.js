@@ -12,7 +12,7 @@ $(document).ready(function () {
             type: 'get',
             dataType: 'JSON',
             success: function (response) {
-                alert('TESTE TESTE');
+                alert($rsEventos);
             }
         });
 

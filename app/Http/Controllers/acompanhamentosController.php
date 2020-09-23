@@ -152,15 +152,19 @@ class acompanhamentosController extends Controller
         return view('acompanhamentos.remove', compact('acompanhamentos'));
     }
 
+
     public function getEvento(){
-    $req = request();
+        $req = request();
 
-    //consultar no banco
-    $rsEventos = DB::table('eventos');
+        //consultar no banco
 
-    return response()->json($rsEventos);
+         $rsEventos= DB::table('clientes')
+         ->join('eventos', 'clientes.id', '=', 'eventos.cleintes_id')
+         ->get();
 
-}
+        return response()->json($rsEventos);
+
+    }
 
 
 }

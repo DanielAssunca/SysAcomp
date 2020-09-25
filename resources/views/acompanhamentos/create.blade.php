@@ -57,7 +57,7 @@
                                     <div class="container">
 
                                         <div class="row">
-                                            <div class="col-md-7">
+                                            <div class="col-md-12">
 
                                                 <div class="form-group">
                                                     <label for="clientes_id">Selecione o Cliente</label>
@@ -85,140 +85,73 @@
                                             </div>
                                         </div>
                                     </div>
-
-
-                                    <div class="container container-fluid">
+                                    <div class="container">
 
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <div class="panel panel-default">
-                                                    <div class="panel-heading" style="cursor: pointer"
-                                                        onclick="$('#panel-body-t-geradas-c').toggle(200)">
-                                                        <h3 class="panel-title">
-                                                            <b>
-                                                                <center>PLANOS DE PAGAMENTO - CATEGORIAS E FORMAS DE
-                                                                    PAGAMENTO </center>
-                                                            </b>
-
-                                                        </h3>
-                                                    </div>
-                                                    <div class="panel-body" id="panel-body-t-geradas-c"
-                                                        style="display: none;">
-
-                                                        <div class="row">
-                                                            <div class="col-md-6">
 
 
-                                                            </div>
-
+                                                <div class="panel-group" id="accordion">
+                                                    <div class="panel panel-default">
+                                                        <div class="panel-heading">
+                                                            <h4 class="panel-title">
+                                                                <a data-toggle="collapse" data-parent="#accordion"
+                                                                    href="#collapse1">
+                                                                    FORMAS DE PAGAMENTO</a>
+                                                            </h4>
                                                         </div>
+                                                        <div id="collapse1" class="panel-collapse collapse">
+                                                            <div class="panel-body">
+                                                                <textarea id="w3review" name="w3review" rows="4" cols="182">
 
+                                                                        </textarea></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="panel panel-default">
+                                                        <div class="panel-heading">
+                                                            <h4 class="panel-title">
+                                                                <a data-toggle="collapse" data-parent="#accordion"
+                                                                    href="#collapse2">
+                                                                    CATEGORIAS</a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapse2" class="panel-collapse collapse">
+                                                            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur
+                                                                <textarea id="w3review" name="w3review" rows="4" cols="182">
+
+                                                                    </textarea></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title">
+                                                            <a data-toggle="collapse" data-parent="#accordion"
+                                                                href="#collapse3">
+                                                                PLANOS DE PAGAMENTO</a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapse3" class="panel-collapse collapse">
+                                                        <div class="panel-body"> <textarea id="w3review" name="w3review"
+                                                                rows="4" cols="182">
+
+                                                                </textarea></div>
                                                     </div>
                                                 </div>
                                             </div>
+
                                         </div>
-
-
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="panel panel-default">
-                                                    <div class="panel-heading" style="cursor: pointer"
-                                                        onclick="$('#panel-body-t-geradas-c').toggle(200)">
-                                                        <h3 class="panel-title">
-                                                            <b>
-                                                                <center>CONFIGURADORES ATIVOS E MODELOS DE
-                                                                    E-MAIL</center>
-                                                            </b>
-
-                                                        </h3>
-                                                    </div>
-                                                    <div class="panel-body" id="panel-body-t-geradas-c"
-                                                        style="display: none;">
-
-                                                        <div class="row">
-                                                            <div class="col-md-6">
-
-
-                                                            </div>
-
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-
-
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="panel panel-default">
-                                                    <div class="panel-heading" style="cursor: pointer"
-                                                        onclick="$('#panel-body-t-geradas-c').toggle(200)">
-                                                        <h3 class="panel-title">
-                                                            <b>
-                                                                <center>VALIDAÇÃO DE SÓCIOS E COMPROVANTES
-                                                                </center>
-                                                            </b>
-
-                                                        </h3>
-                                                    </div>
-                                                    <div class="panel-body" id="panel-body-t-geradas-c"
-                                                        style="display: none;">
-
-                                                        <div class="row">
-                                                            <div class="col-md-6">
-
-
-                                                            </div>
-
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="panel panel-default">
-                                                    <div class="panel-heading" style="cursor: pointer"
-                                                        onclick="$('#panel-body-t-geradas-c').toggle(200)">
-                                                        <h3 class="panel-title">
-                                                            <b>
-                                                                <center>TESTE REALIZADOS</center>
-                                                            </b>
-
-                                                        </h3>
-                                                    </div>
-                                                    <div class="panel-body" id="panel-body-t-geradas-c"
-                                                        style="display: none;">
-
-                                                        <div class="row">
-                                                            <div class="col-md-6">
-
-
-                                                            </div>
-
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
                                     </div>
-                                </form>
                             </div>
                         </div>
+                        </form>
                     </div>
-
                 </div>
-
             </div>
+
+        </div>
+
+        </div>
         </div>
 
 

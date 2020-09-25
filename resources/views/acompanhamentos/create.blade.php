@@ -2,6 +2,7 @@
 
 @section('content')
 
+
     <body>
         {{--AQUI VAI SER CONSTRIODO O MENU DA APLICAÇÃO!!! --}}
         <nav class="navbar navbar-inverse float-left">
@@ -32,25 +33,27 @@
                     <li class="visible-xs"><a href="#">Sair</a></li>
                 </ul>
             </div>
+
             <div class="content">
                 <div class="container-fluid">
                     <div class="row">
-                        @if ($errors->any())
-                            <div class="alert alert-danger" role="alert">
-                                @foreach ($errors->all() as $error)
-                                    {{ $error }}<br>
-                                @endforeach
-                            </div>
-                        @endif
-                        <div class="panel panel-default">
+                        <form method="post" action="{{ route('acompanhamentos.store') }}">
+                            {{ csrf_field() }}
+                            @if ($errors->any())
+                                <div class="alert alert-danger" role="alert">
+                                    @foreach ($errors->all() as $error)
+                                        {{ $error }}<br>
+                                    @endforeach
+                                </div>
+                            @endif
+                            <div class="panel panel-default">
 
-                            <div class="panel-heading">
-                                <h3>Cadastro de Acompanhamentos</h3>
-                            </div>
-                            <div class="panel-body">
+                                <div class="panel-heading">
+                                    <h3>Cadastro de Acompanhamentos</h3>
+                                </div>
+                                <div class="panel-body">
 
-                                <form method="post" action="{{ route('acompanhamentos.store') }}">
-                                    {{ csrf_field() }}
+
 
 
 
@@ -60,7 +63,7 @@
                                             <div class="col-md-12">
 
                                                 <div class="form-group">
-                                                    <label for="clientes_id">Selecione o Cliente</label>
+                                                    <label for="clientes_id">CLIENTE</label>
                                                     <select name="select_cliente" id="select_cliente" class="form-control"
                                                         required>
                                                         <option>Selecione</option>
@@ -75,7 +78,7 @@
                                                 DENTRO DO CONTROLER ACOMPNHAMENTO PARA POPULAR ATRAVEZ DO AJAX VAI SER USADO
                                                 AJAX(JAVASCRIPT)!!! --}}
                                                 <div class="form-group">
-                                                    <label for="eventos_id">Selecione o Evento</label>
+                                                    <label for="eventos_id">EVENTO</label>
                                                     <select name="select_eventos" id="select_eventos" disabled="true"
                                                         class="form-control" required>
 
@@ -85,65 +88,96 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="container">
+                                    <div class="container" style="height: 5000px">
 
                                         <div class="row">
                                             <div class="col-md-12">
 
 
-                                                <div class="panel-group" id="accordion">
+                                                <div class="panel-group" id="accordion"  style="height: 2500px">
                                                     <div class="panel panel-default">
                                                         <div class="panel-heading">
                                                             <h4 class="panel-title">
                                                                 <a data-toggle="collapse" data-parent="#accordion"
                                                                     href="#collapse1">
-                                                                    FORMAS DE PAGAMENTO</a>
+                                                                    <b>FORMAS DE PAGAMENTO</b></a>
                                                             </h4>
                                                         </div>
                                                         <div id="collapse1" class="panel-collapse collapse">
                                                             <div class="panel-body">
-                                                                <textarea id="w3review" name="w3review" rows="4" cols="182">
+                                                                <textarea id="w3review" name="w3review" rows="12"
+                                                                    cols="182">
 
-                                                                        </textarea></div>
+                                                                                                    </textarea></div>
+                                                            <button type="button" class="btn btn-success">Salvar</button>
+                                                            <button type="button" class="btn btn-warning">Editar</button>
                                                         </div>
+
                                                     </div>
                                                     <div class="panel panel-default">
                                                         <div class="panel-heading">
                                                             <h4 class="panel-title">
                                                                 <a data-toggle="collapse" data-parent="#accordion"
                                                                     href="#collapse2">
-                                                                    CATEGORIAS</a>
+                                                                    <b>CATEGORIAS</b></a>
                                                             </h4>
                                                         </div>
                                                         <div id="collapse2" class="panel-collapse collapse">
-                                                            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur
-                                                                <textarea id="w3review" name="w3review" rows="4" cols="182">
+                                                            <div class="panel-body">
+                                                                <textarea id="w3review" name="w3review" rows="12"
+                                                                    cols="182">
 
-                                                                    </textarea></div>
+                                                                                                </textarea></div>
+                                                            <button type="button" class="btn btn-success">Salvar</button>
+                                                            <button type="button" class="btn btn-warning">Editar</button>
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="panel panel-default">
+                                                        <div class="panel-heading">
+                                                            <h4 class="panel-title">
+                                                                <a data-toggle="collapse" data-parent="#accordion"
+                                                                    href="#collapse3">
+                                                                    <b>PLANOS DE PAGAMENTO</b></a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapse3" class="panel-collapse collapse">
+                                                            <div class="panel-body"> <textarea id="w3review" name="w3review"
+                                                                    rows="12" cols="182">
+
+                                                                                                </textarea></div>
+                                                            <button type="button" class="btn btn-success">Salvar</button>
+                                                            <button type="button" class="btn btn-warning">Editar</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="panel panel-default">
+                                                        <div class="panel-heading">
+                                                            <h4 class="panel-title">
+                                                                <a data-toggle="collapse" data-parent="#accordion"
+                                                                    href="#collapse4">
+                                                                    <b>MODELOS DE E-MAIL</b></a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapse4" class="panel-collapse collapse">
+                                                            <div class="panel-body"> <textarea id="w3review" name="w3review"
+                                                                    rows="12" cols="182">
+
+                                                                                                </textarea></div>
+                                                            <button type="button" class="btn btn-success">Salvar</button>
+                                                            <button type="button" class="btn btn-warning">Editar</button>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="panel panel-default">
-                                                    <div class="panel-heading">
-                                                        <h4 class="panel-title">
-                                                            <a data-toggle="collapse" data-parent="#accordion"
-                                                                href="#collapse3">
-                                                                PLANOS DE PAGAMENTO</a>
-                                                        </h4>
-                                                    </div>
-                                                    <div id="collapse3" class="panel-collapse collapse">
-                                                        <div class="panel-body"> <textarea id="w3review" name="w3review"
-                                                                rows="4" cols="182">
 
-                                                                </textarea></div>
-                                                    </div>
-                                                </div>
+
                                             </div>
+
 
                                         </div>
                                     </div>
+                                </div>
                             </div>
-                        </div>
                         </form>
                     </div>
                 </div>

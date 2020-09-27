@@ -18,7 +18,69 @@ $(document).ready(function () {
 
     });
 
+
+    $("#Conf_FormaPGTO_01").click(function () {
+        $("#Text_FormaPGTO_01").attr('disabled', true);
+        document.getElementById('Text_FormaPGTO_01').textContent = ("Formas de Pagamento Conferidas!");
+
+    });
+
+
+    $("#Alter_FormaPGTO_01").click(function () {
+        $("#Text_FormaPGTO_01").attr('disabled', false);
+
+    });
+
+
+
+    $("#Conf_FormaPGTO_02").click(function () {
+        $("#Text_FormaPGTO_02").attr('disabled', true);
+        document.getElementById('Text_FormaPGTO_02').textContent = ("Formas de Pagamento Conferidas!");
+
+    });
+
+
+    $("#Alter_FormaPGTO_02").click(function () {
+        $("#Text_FormaPGTO_02").attr('disabled', false);
+
+    });
+
+
+    $("#Conf_FormaPGTO_03").click(function () {
+        $("#Text_FormaPGTO_03").attr('disabled', true);
+        document.getElementById('Text_FormaPGTO_03').textContent = ("Formas de Pagamento Conferidas!");
+
+    });
+
+
+    $("#Alter_FormaPGTO_03").click(function () {
+        $("#Text_FormaPGTO_03").attr('disabled', false);
+
+    });
+
+
+    $("#Conf_FormaPGTO_04").click(function () {
+        $("#Text_FormaPGTO_04").attr('disabled', true);
+        document.getElementById('Text_FormaPGTO_04').textContent = ("Formas de Pagamento Conferidas!");
+
+    });
+
+
+    $("#Alter_FormaPGTO_04").click(function () {
+        $("#Text_FormaPGTO_04").attr('disabled', false);
+
+    });
+
+
+
+
+
+
 });
+
+
+
+
 
 function limpa_formulário_cep() {
     //Limpa valores do formulário de cep.

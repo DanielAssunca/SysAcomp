@@ -94,7 +94,7 @@
                                             <div class="col-md-12">
 
 
-                                                <div class="panel-group" id="accordion"  style="height: 2500px">
+                                                <div class="panel-group" id="accordion" style="height: 2500px">
                                                     <div class="panel panel-default">
                                                         <div class="panel-heading">
                                                             <h4 class="panel-title">
@@ -105,12 +105,13 @@
                                                         </div>
                                                         <div id="collapse1" class="panel-collapse collapse">
                                                             <div class="panel-body">
-                                                                <textarea id="w3review" name="w3review" rows="12"
+                                                                <textarea id="Text_FormaPGTO_01" name="Text_FormaPGTO_01" rows="12"
                                                                     cols="182">
 
-                                                                                                    </textarea></div>
-                                                            <button type="button" class="btn btn-success">Salvar</button>
-                                                            <button type="button" class="btn btn-warning">Editar</button>
+                                                                                                            </textarea></div>
+
+                                                            <button id="Conf_FormaPGTO_01"  type="button" class="btn btn-success">Conferido</button>
+                                                            <button id="Alter_FormaPGTO_01" type="button" class="btn btn-warning">Alterar</button>
                                                         </div>
 
                                                     </div>
@@ -124,12 +125,12 @@
                                                         </div>
                                                         <div id="collapse2" class="panel-collapse collapse">
                                                             <div class="panel-body">
-                                                                <textarea id="w3review" name="w3review" rows="12"
+                                                                <textarea id="Text_FormaPGTO_02" name="Text_FormaPGTO_02" rows="12"
                                                                     cols="182">
 
-                                                                                                </textarea></div>
-                                                            <button type="button" class="btn btn-success">Salvar</button>
-                                                            <button type="button" class="btn btn-warning">Editar</button>
+                                                                "                                       </textarea></div>
+                                                            <button id="Conf_FormaPGTO_02" type="button" class="btn btn-success">Conferido</button>
+                                                            <button  id="Alter_FormaPGTO_02" type="button" class="btn btn-warning">Alterar</button>
 
                                                         </div>
                                                     </div>
@@ -143,12 +144,15 @@
                                                             </h4>
                                                         </div>
                                                         <div id="collapse3" class="panel-collapse collapse">
-                                                            <div class="panel-body"> <textarea id="w3review" name="w3review"
+                                                            <div class="panel-body"> <textarea id="Text_FormaPGTO_03" name="Text_FormaPGTO_03"
                                                                     rows="12" cols="182">
 
-                                                                                                </textarea></div>
-                                                            <button type="button" class="btn btn-success">Salvar</button>
-                                                            <button type="button" class="btn btn-warning">Editar</button>
+                                                                                                        </textarea></div>
+                                                            <div class="btn-group-toggle" data-toggle="buttons">
+
+                                                            </div>
+                                                            <button id="Conf_FormaPGTO_03" type="button" class="btn btn-success">Conferido</button>
+                                                            <button id="Alter_FormaPGTO_03" type="button" class="btn btn-warning">Alterar</button>
                                                         </div>
                                                     </div>
                                                     <div class="panel panel-default">
@@ -160,12 +164,12 @@
                                                             </h4>
                                                         </div>
                                                         <div id="collapse4" class="panel-collapse collapse">
-                                                            <div class="panel-body"> <textarea id="w3review" name="w3review"
+                                                            <div class="panel-body"> <textarea id="Text_FormaPGTO_04" name="Text_FormaPGTO_04"
                                                                     rows="12" cols="182">
 
-                                                                                                </textarea></div>
-                                                            <button type="button" class="btn btn-success">Salvar</button>
-                                                            <button type="button" class="btn btn-warning">Editar</button>
+                                                                                                        </textarea></div>
+                                                            <button id="Conf_FormaPGTO_04" type="button" class="btn btn-success">Conferido</button>
+                                                            <button id="Alter_FormaPGTO_04" type="button" class="btn btn-warning">Alterar</button>
                                                         </div>
                                                     </div>
                                                 </div>

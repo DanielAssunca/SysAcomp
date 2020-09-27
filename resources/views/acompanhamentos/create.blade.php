@@ -100,18 +100,43 @@
                                                             <h4 class="panel-title">
                                                                 <a data-toggle="collapse" data-parent="#accordion"
                                                                     href="#collapse1">
-                                                                    <b>FORMAS DE PAGAMENTO</b></a>
+                                                                    <b>FORMAS DE PAGAMENTO</b>
+                                                                </a>
+
+
+
+
                                                             </h4>
                                                         </div>
                                                         <div id="collapse1" class="panel-collapse collapse">
                                                             <div class="panel-body">
-                                                                <textarea id="Text_FormaPGTO_01" name="Text_FormaPGTO_01" rows="12"
-                                                                    cols="182">
+                                                                <textarea id="Text_FormaPGTO" name="Text_FormaPGTO_01"
+                                                                    rows="12" cols="182">
 
-                                                                                                            </textarea></div>
+                                                                                                                                    </textarea>
+                                                            </div>
 
-                                                            <button id="Conf_FormaPGTO_01"  type="button" class="btn btn-success">Conferido</button>
-                                                            <button id="Alter_FormaPGTO_01" type="button" class="btn btn-warning">Alterar</button>
+
+
+
+
+                                                            <div class="container">
+
+                                                                <div class="row">
+                                                                    <div class="col-md-12">
+                                                                        <input type="hidden" name="MAX_FILE_SIZE"
+                                                                            value="Anexe a planilha de Formas de Pagamento." />
+                                                                        <input type="file" />
+                                                                        <h5>Anexe a Planilha Excel</h5>
+                                                                        <button id="Conf_FormaPGTO" type="button"
+                                                                            class="btn btn-success">Conferido</button>
+                                                                        <button id="Alter_FormaPGTO" type="button"
+                                                                            class="btn btn-warning">Alterar</button>
+                                                                    </div>
+
+                                                                </div>
+
+                                                            </div>
                                                         </div>
 
                                                     </div>
@@ -125,12 +150,15 @@
                                                         </div>
                                                         <div id="collapse2" class="panel-collapse collapse">
                                                             <div class="panel-body">
-                                                                <textarea id="Text_FormaPGTO_02" name="Text_FormaPGTO_02" rows="12"
-                                                                    cols="182">
+                                                                <textarea id="Text_Categoria" name="Text_FormaPGTO_02"
+                                                                    rows="12" cols="182">
 
-                                                                "                                       </textarea></div>
-                                                            <button id="Conf_FormaPGTO_02" type="button" class="btn btn-success">Conferido</button>
-                                                            <button  id="Alter_FormaPGTO_02" type="button" class="btn btn-warning">Alterar</button>
+                                                                                        "                                       </textarea>
+                                                            </div>
+                                                            <button id="Conf_Categoria" type="button"
+                                                                class="btn btn-success">Conferido</button>
+                                                            <button id="Alter_Categoria" type="button"
+                                                                class="btn btn-warning">Alterar</button>
 
                                                         </div>
                                                     </div>
@@ -144,15 +172,18 @@
                                                             </h4>
                                                         </div>
                                                         <div id="collapse3" class="panel-collapse collapse">
-                                                            <div class="panel-body"> <textarea id="Text_FormaPGTO_03" name="Text_FormaPGTO_03"
-                                                                    rows="12" cols="182">
+                                                            <div class="panel-body"> <textarea id="Text_PlanoPGTO"
+                                                                    name="Text_FormaPGTO_03" rows="12" cols="182">
 
-                                                                                                        </textarea></div>
+                                                                                                                                </textarea>
+                                                            </div>
                                                             <div class="btn-group-toggle" data-toggle="buttons">
 
                                                             </div>
-                                                            <button id="Conf_FormaPGTO_03" type="button" class="btn btn-success">Conferido</button>
-                                                            <button id="Alter_FormaPGTO_03" type="button" class="btn btn-warning">Alterar</button>
+                                                            <button id="Conf_PlanoPGTO" type="button"
+                                                                class="btn btn-success">Conferido</button>
+                                                            <button id="Alter_PlanoPGTO" type="button"
+                                                                class="btn btn-warning">Alterar</button>
                                                         </div>
                                                     </div>
                                                     <div class="panel panel-default">
@@ -164,12 +195,15 @@
                                                             </h4>
                                                         </div>
                                                         <div id="collapse4" class="panel-collapse collapse">
-                                                            <div class="panel-body"> <textarea id="Text_FormaPGTO_04" name="Text_FormaPGTO_04"
-                                                                    rows="12" cols="182">
+                                                            <div class="panel-body"> <textarea id="Text_ModeloEMAIL"
+                                                                    name="Text_ModeloEMAIL" rows="12" cols="182">
 
-                                                                                                        </textarea></div>
-                                                            <button id="Conf_FormaPGTO_04" type="button" class="btn btn-success">Conferido</button>
-                                                            <button id="Alter_FormaPGTO_04" type="button" class="btn btn-warning">Alterar</button>
+                                                                                                                                </textarea>
+                                                            </div>
+                                                            <button id="Conf_ModeloEMAIL" type="button"
+                                                                class="btn btn-success">Conferido</button>
+                                                            <button id="Alter_ModeloEMAIL" type="button"
+                                                                class="btn btn-warning">Alterar</button>
                                                         </div>
                                                     </div>
                                                 </div>

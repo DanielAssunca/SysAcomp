@@ -19,55 +19,55 @@ $(document).ready(function () {
     });
 
 
-    $("#Conf_FormaPGTO_01").click(function () {
-        $("#Text_FormaPGTO_01").attr('disabled', true);
-        document.getElementById('Text_FormaPGTO_01').textContent = ("Formas de Pagamento Conferidas!");
+    $("#Conf_FormaPGTO").click(function () {
+        $("#Text_FormaPGTO").attr('disabled', true);
+        document.getElementById('Text_FormaPGTO').textContent = ("Formas de Pagamento Conferidas!");
 
     });
 
 
-    $("#Alter_FormaPGTO_01").click(function () {
-        $("#Text_FormaPGTO_01").attr('disabled', false);
+    $("#Alter_FormaPGTO").click(function () {
+        $("#Text_FormaPGTO").attr('disabled', false);
 
     });
 
 
 
-    $("#Conf_FormaPGTO_02").click(function () {
-        $("#Text_FormaPGTO_02").attr('disabled', true);
-        document.getElementById('Text_FormaPGTO_02').textContent = ("Formas de Pagamento Conferidas!");
+    $("#Conf_Categoria").click(function () {
+        $("#Text_Categoria").attr('disabled', true);
+        document.getElementById('Text_Categoria').textContent = ("Categorias Conferidas!");
 
     });
 
 
-    $("#Alter_FormaPGTO_02").click(function () {
-        $("#Text_FormaPGTO_02").attr('disabled', false);
+    $("#Alter_Categoria").click(function () {
+        $("#Text_Categoria").attr('disabled', false);
 
     });
 
 
-    $("#Conf_FormaPGTO_03").click(function () {
-        $("#Text_FormaPGTO_03").attr('disabled', true);
-        document.getElementById('Text_FormaPGTO_03').textContent = ("Formas de Pagamento Conferidas!");
+    $("#Conf_PlanoPGTO").click(function () {
+        $("#Text_PlanoPGTO").attr('disabled', true);
+        document.getElementById('Text_PlanoPGTO').textContent = ("Plano de Pagamento Conferidos!");
 
     });
 
 
-    $("#Alter_FormaPGTO_03").click(function () {
-        $("#Text_FormaPGTO_03").attr('disabled', false);
+    $("#Alter_PlanoPGTO").click(function () {
+        $("#Text_PlanoPGTO").attr('disabled', false);
 
     });
 
 
-    $("#Conf_FormaPGTO_04").click(function () {
-        $("#Text_FormaPGTO_04").attr('disabled', true);
-        document.getElementById('Text_FormaPGTO_04').textContent = ("Formas de Pagamento Conferidas!");
+    $("#Conf_ModeloEMAIL").click(function () {
+        $("#Text_ModeloEMAIL").attr('disabled', true);
+        document.getElementById('Text_ModeloEMAIL').textContent = ("Modelos de E-mail Conferidos!");
 
     });
 
 
-    $("#Alter_FormaPGTO_04").click(function () {
-        $("#Text_FormaPGTO_04").attr('disabled', false);
+    $("#Alter_ModeloEMAIL").click(function () {
+        $("#Text_ModeloEMAIL").attr('disabled', false);
 
     });
 

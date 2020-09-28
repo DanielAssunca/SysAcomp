@@ -8,11 +8,11 @@ $(document).ready(function () {
         $("#select_eventos").attr('disabled', false);
         console.log('teste');
         $.ajax({
-            url: '/acompanhamentos/getEvento/',
+            url: '/Http/controllers/acompanhamentos/get-evento/',
             type: 'get',
             dataType: 'JSON',
             success: function (response) {
-                alert($rsEventos);
+                alert("danger");
             }
         });
 

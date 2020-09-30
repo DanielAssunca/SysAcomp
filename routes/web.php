@@ -27,7 +27,7 @@ Route::resource('acompanhamentos', 'acompanhamentosController');
 
 Route::get('/clientes/eventos/{id}', 'ClientesController@eventos')->name('clientes.eventos');
 
-Route::get('/acompanhamentos/getEvento/{id}', 'acompanhamentosController@getEvento');
+Route::get('/acompanhamentos/get-evento/{id}', 'acompanhamentosController@getEvento');
 
 Route::resource('/', 'HomeController');
 

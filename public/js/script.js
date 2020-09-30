@@ -8,7 +8,8 @@ $(document).ready(function () {
         $("#select_eventos").attr('disabled', false);
         console.log('teste');
         $.ajax({
-            url: '/Http/controllers/acompanhamentos/get-evento/',
+            url: '/controllers/acompanhamentosController/get-evento/',
+           //C:\xampp\htdocs\SysAcomp\app\Http\Controllers\acompanhamentosController.php
             type: 'get',
             dataType: 'JSON',
             success: function (response) {

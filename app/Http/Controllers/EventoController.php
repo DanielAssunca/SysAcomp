@@ -19,7 +19,7 @@ class EventoController extends Controller
     {
         $validator = Validator::make($request->all(), [
             "nome" => "required",
-            "data_evento" => "required",
+            "data_inicio" => "required",
             "site_evento" => "required"
 
         ]);

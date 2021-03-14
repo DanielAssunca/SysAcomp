@@ -96,7 +96,7 @@
                                             <label for="data">Data de Inicio</label>
                                             <input type="text" class="form-control" placeholder="Ex.: dd/mm/aaaa"
                                                 data-mask="00/00/0000" maxlength="10" autocomplete="on"
-                                                class="form-control" name="data_evento" required>
+                                                class="form-control" name="data_inicio" required>
                                         </div>
                                     </div>
 
